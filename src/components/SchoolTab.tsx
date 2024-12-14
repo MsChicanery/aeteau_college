@@ -10,7 +10,7 @@ interface SchoolListProps {
   schools: School[]
 }
 
-export function SchoolTab({ name, description, majors }: School) {
+export function SchoolTab({ name, description, majors, minors }: School) {
   return (
     <Card>
       <CardHeader>
