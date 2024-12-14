@@ -5,13 +5,14 @@ import { ProgramCard } from "@/components/ProgramCard"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
+import Hero from './components/Hero'; // Ensure this is the correct path to the Hero component
 
 export default function Home() {
   return (
     
       <Hero
         title="Welcome to Aeteau College"
-        subtitle=""nos nescio quomodo latine loqui""
+        subtitle='"nos nescio quomodo latine loqui"'
         ctaText="Apply Now"
         ctaLink="/apply"
         imageSrc="/placeholder.svg?height=1080&width=1920&text=Aeteau+College+Campus"
