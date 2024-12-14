@@ -4,27 +4,30 @@ const schools = [
   {
     name: "Westcote School of Arts",
     description: "Pushing the boundaries of artistic expression and interdimensional creativity.",
-    majors: ["Portal Astrology", "Email Concentration", "Inspect Element Concentration"],
+    dean: "Dr. Artemis Vale",
+    majors: ["Portal Astrology", "Email Concentration"],
+    minors: ["Interdimensional Design", "Experimental Sculpture"],
   },
   {
     name: "Ismay School Of The Arts",
     description: "Designing For The Ages",
-    majors: ["Verified Villiage Type Shi", "Graphic Design"],
+    dean: "Prof. Eliza Monroe",
+    majors: ["Verified Village Type Shi", "Graphic Design"],
+    minors: ["Interactive Media", "Sustainable Design"],
   },
   {
     name: "School of Astrology",
     description: "Unraveling the mysteries of the cosmos and beyond.",
+    dean: "Dr. Orion Vega",
     majors: ["Portal Astrology", "Inspect Element Astrology", "Email Astrology"],
+    minors: ["Celestial Mapping", "Astrological Communication"],
   },
   {
     name: "School of College",
     description: "Meta-education at its finest, where we study the art of studying.",
+    dean: "Dr. Linus Capstone",
     majors: ["Admissions", "College Consulting", "Rankings Sciences", "Dual Enrollment Studies"],
-  },
-   {
-    name: "Femboy Computer Science School",
-    description: "Aeteau University’s competitive computer science program is renowned for its rigorous curriculum and emphasis on innovation. Students are immersed in a diverse range of topics, from foundational algorithms and data structures to cutting-edge fields like artificial intelligence, cybersecurity, and quantum computing. With a strong focus on hands-on learning, the program encourages collaboration through research projects, hackathons, and industry partnerships. Faculty members are leaders in their fields, providing mentorship and opportunities to engage in groundbreaking research. The program’s graduates are highly sought after by top tech companies and graduate schools, making Aeteau University a premier destination for aspiring computer scientists.",
-    majors: ["Computer Engineering", "Computer Science", "Electrical Engineering", "UI/UX Design"],
+    minors: ["Academic Leadership", "Higher Education Policy"],
   },
 ];
 
@@ -36,6 +39,11 @@ export default function Schools() {
         {schools.map((school) => (
           <div key={school.name} className="school-card">
             <SchoolTab {...school} />
+            <div className="mt-4">
+              <p className="text-lg font-semibold">Dean: {school.dean}</p>
+              <p className="text-md font-medium">Majors: {school.majors.join(", ")}</p>
+              <p className="text-md font-medium">Minors: {school.minors.join(", ")}</p>
+            </div>
           </div>
         ))}
       </div>
