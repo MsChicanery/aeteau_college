@@ -9,9 +9,9 @@ const faculty = [
     image: "/placeholder.svg?height=100&width=100&text=AB"
   },
   {
-    name: "Prof. Enigma Costco",
-    title: "Dean of Admissions",
-    description: "Designs our arcane and confusing admission tests. Never seen without a Costco-sized coffee.",
+    name: "Prof. Kokoro Nashi",
+    title: "Dean of Computer Science",
+    description: "Lorem Ipusem Dolor Sit Amet",
     image: "/placeholder.svg?height=100&width=100&text=EC"
   },
   {
