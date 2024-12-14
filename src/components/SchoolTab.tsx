@@ -27,7 +27,7 @@ export function SchoolTab({ name, description, majors, minors }: School) {
         <br></br>
         <h3 className="font-semibold mb-2">Minors:</h3>
         <ul className="list-disc list-inside">
-          {minors.map((minors, index) => (
+          {minors.map((minor, index) => (
             <li key={index}>{minor}</li>
           ))}
         </ul>
