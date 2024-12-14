@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+aimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 // Import Image component
 import Image from 'next/image'
@@ -23,9 +23,9 @@ const faculty = [
     image: "../public/faculty/butter.png"
   },
   {
-    name: "Prof. Astro Ninja",
-    title: "Head of the School of Astrology",
-    description: "Completed the American Ninja Warrior course in under 2 minutes. Also an expert in portal astrology.",
+    name: "Mrs. Carly T",
+    title: "Dean of Admissions",
+    description: "Carly T. is a professional skateboarder from the city of Dani located in California. She has a PHD in Discord Moderation and has studied Server Design at Cambridge. ",
     image: "/placeholder.svg?height=100&width=100&text=AN"
   }
 ]
