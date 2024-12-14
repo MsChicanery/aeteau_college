@@ -14,7 +14,7 @@ export default function Apply() {
   const [iqScore, setIqScore] = useState('')
   const [discordUsername, setDiscordUsername] = useState('')
   const [submitting, setSubmitting] = useState(false)
-  const { toast } = Toast()
+  const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
