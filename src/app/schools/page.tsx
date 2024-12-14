@@ -16,7 +16,7 @@ const schools = [
     minors: ["Inspect Element Astrology", "Email Astrology"],
   },
   {
-    name: "School of Meta-Education",
+    name: "School of College",
     description: "Exploring the methodologies and philosophies behind higher education.",
     dean: "Dr. Linus Capstone",
     majors: ["Admissions Strategy", "College Consulting", "Ranking Sciences", "Dual Enrollment Studies"],
