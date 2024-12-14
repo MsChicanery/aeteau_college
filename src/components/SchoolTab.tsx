@@ -43,7 +43,8 @@ export function SchoolList({ schools }: SchoolListProps) {
         <SchoolTab 
           key={index} 
           name={school.name} 
-          description={school.description} 
+          majors={school.dean} 
+          description={school.description}
           majors={school.majors} 
         />
       ))}
