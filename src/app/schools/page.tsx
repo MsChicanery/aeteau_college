@@ -1,4 +1,3 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SchoolTab } from "@/components/SchoolTab";
 
 const schools = [
@@ -24,28 +23,17 @@ const schools = [
   },
 ];
 
-function formatTabValue(name) {
-  return name.toLowerCase().replace(/\s+/g, '-');
-}
-
 export default function Schools() {
   return (
     <div className="container mx-auto p-4 py-16">
       <h1 className="text-4xl font-bold mb-8 text-center">Our Schools</h1>
-      <Tabs defaultValue={formatTabValue(schools[0].name)}>
-        <TabsList className="grid w-full grid-cols-3">
-          {schools.map(({ name }) => (
-            <TabsTrigger key={name} value={formatTabValue(name)}>
-              {name}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {schools.map((school) => (
-          <TabsContent key={school.name} value={formatTabValue(school.name)}>
+          <div key={school.name} className="school-card">
             <SchoolTab {...school} />
-          </TabsContent>
+          </div>
         ))}
-      </Tabs>
+      </div>
     </div>
   );
 }
