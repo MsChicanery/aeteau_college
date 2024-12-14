@@ -1,60 +1,41 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight, Award, Users, Zap, Calendar, Book, Globe } from 'lucide-react'
+import { AwardIcon, UsersIcon, ZapIcon, CalendarIcon, BookOpenIcon, GlobeIcon } from 'lucide-react'
+import { Hero } from "@/components/Hero"
+import { FeatureCard } from "@/components/FeatureCard"
+import { ProgramCard } from "@/components/ProgramCard"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div>
-      <section className="relative h-[80vh] flex items-center justify-center text-white">
-        <Image
-          src="/placeholder.svg?height=1080&width=1920&text=Aeteau+College+Campus"
-          layout="fill"
-          objectFit="cover"
-          alt="Aeteau College Campus"
-          className="brightness-50"
-        />
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-4">Welcome to Aeteau College</h1>
-          <p className="text-xl mb-8">"nos nescio quomodo latine loqui"</p>
-          <Button asChild size="lg">
-            <Link href="/apply">Apply Now</Link>
-          </Button>
-        </div>
-      </section>
+      <Hero
+        title="Welcome to Aeteau College"
+        subtitle=""nos nescio quomodo latine loqui""
+        ctaText="Apply Now"
+        ctaLink="/apply"
+        imageSrc="/placeholder.svg?height=1080&width=1920&text=Aeteau+College+Campus"
+      />
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Aeteau?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <Award className="w-10 h-10 text-[#a2ca2c] mb-4" />
-                <CardTitle>Unique Admissions</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>Our arcane and confusing tests ensure only the most... unique individuals are admitted.</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Users className="w-10 h-10 text-[#a2ca2c] mb-4" />
-                <CardTitle>Exclusive Bloodlines</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>Only one person per bloodline can be admitted. Family reunions just got more interesting!</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Zap className="w-10 h-10 text-[#a2ca2c] mb-4" />
-                <CardTitle>Ninja Warrior Course</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>Pass our American Ninja Warrior course in under 4 minutes for instant admission!</p>
-              </CardContent>
-            </Card>
+            <FeatureCard
+              icon={AwardIcon}
+              title="Unique Admissions"
+              description="Our arcane and confusing tests ensure only the most... unique individuals are admitted."
+            />
+            <FeatureCard
+              icon={UsersIcon}
+              title="Exclusive Bloodlines"
+              description="Only one person per bloodline can be admitted. Family reunions just got more interesting!"
+            />
+            <FeatureCard
+              icon={ZapIcon}
+              title="Ninja Warrior Course"
+              description="Pass our American Ninja Warrior course in under 4 minutes for instant admission!"
+            />
           </div>
         </div>
       </section>
@@ -63,23 +44,18 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Featured Programs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {['Portal Astrology', 'Email Concentration', 'Rankings Sciences'].map((program, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle>{program}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Discover the mysteries of {program.toLowerCase()} in our cutting-edge program.</p>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant="outline">
-                    <Link href="/programs" className="text-[#a2ca2c] font-semibold flex items-center">
-                      Learn More <ArrowRight size={16} className="ml-2" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
+            <ProgramCard
+              title="Portal Astrology"
+              description="Discover the mysteries of portal astrology in our cutting-edge program."
+            />
+            <ProgramCard
+              title="Email Concentration"
+              description="Master the art of email concentration in this unique course."
+            />
+            <ProgramCard
+              title="Rankings Sciences"
+              description="Explore the intricacies of rankings sciences in our innovative program."
+            />
           </div>
         </div>
       </section>
@@ -90,7 +66,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
-                <Calendar className="w-10 h-10 text-[#a2ca2c] mb-4" />
+                <CalendarIcon className="w-10 h-10 text-[#a2ca2c] mb-4" />
                 <CardTitle>Events</CardTitle>
               </CardHeader>
               <CardContent>
@@ -104,7 +80,7 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader>
-                <Book className="w-10 h-10 text-[#a2ca2c] mb-4" />
+                <BookOpenIcon className="w-10 h-10 text-[#a2ca2c] mb-4" />
                 <CardTitle>Academics</CardTitle>
               </CardHeader>
               <CardContent>
@@ -118,7 +94,7 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader>
-                <Globe className="w-10 h-10 text-[#a2ca2c] mb-4" />
+                <GlobeIcon className="w-10 h-10 text-[#a2ca2c] mb-4" />
                 <CardTitle>Global Opportunities</CardTitle>
               </CardHeader>
               <CardContent>
