@@ -39,11 +39,6 @@ export default function Schools() {
         {schools.map((school) => (
           <div key={school.name} className="school-card">
             <SchoolTab {...school} />
-            <div className="mt-4">
-              <p className="text-lg font-semibold">Dean: {school.dean}</p>
-              <p className="text-md font-medium">Majors: {school.majors.join(", ")}</p>
-              <p className="text-md font-medium">Minors: {school.minors.join(", ")}</p>
-            </div>
           </div>
         ))}
       </div>
