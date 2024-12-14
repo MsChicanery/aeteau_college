@@ -1,12 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
-interface SchoolTabProps {
+interface School {
   name: string
   description: string
   majors: string[]
 }
 
-export function SchoolTab({ name, description, majors }: SchoolTabProps) {
+interface SchoolListProps {
+  schools: School[]
+}
+
+export function SchoolTab({ name, description, majors }: School) {
   return (
     <Card>
       <CardHeader>
@@ -25,3 +29,17 @@ export function SchoolTab({ name, description, majors }: SchoolTabProps) {
   )
 }
 
+export function SchoolList({ schools }: SchoolListProps) {
+  return (
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {schools.map((school, index) => (
+        <SchoolTab 
+          key={index} 
+          name={school.name} 
+          description={school.description} 
+          majors={school.majors} 
+        />
+      ))}
+    </div>
+  )
+}
