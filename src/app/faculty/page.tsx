@@ -18,7 +18,7 @@ const faculty = [
     name: "Dr. Butter A. Osmanli",
     title: "Dean of Osmanli School Of Law",
     description: "Handles the school of law, and runs the IT department. Also teaches band classes.S",
-    image: "@/app/faculty/butter.png"
+    image: "faculty/butter.png"
   },
   {
     name: "Prof. Astro Ninja",
