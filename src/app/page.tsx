@@ -1,15 +1,14 @@
-import { AwardIcon, UsersIcon, ZapIcon, CalendarIcon, BookOpenIcon, GlobeIcon } from 'lucide-react'
-import { Hero } from "@/components/Hero"
-import { FeatureCard } from "@/components/FeatureCard"
-import { ProgramCard } from "@/components/ProgramCard"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import Link from 'next/link'
-import Hero from './components/Hero'; // Ensure this is the correct path to the Hero component
+import { AwardIcon, UsersIcon, ZapIcon, CalendarIcon, BookOpenIcon, GlobeIcon } from 'lucide-react';
+import { Hero } from "@/components/Hero";
+import { FeatureCard } from "@/components/FeatureCard";
+import { ProgramCard } from "@/components/ProgramCard";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    
+    <>
       <Hero
         title="Welcome to Aeteau College"
         subtitle='"nos nescio quomodo latine loqui"'
@@ -110,7 +109,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    
-  )
+    </>
+  );
 }
-
