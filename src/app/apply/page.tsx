@@ -7,14 +7,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
-import { useToast } from "@/components/ui/toast"
+import { Toast } from "@/components/ui/toast"
 
 export default function Apply() {
   const [height, setHeight] = useState('')
   const [iqScore, setIqScore] = useState('')
   const [discordUsername, setDiscordUsername] = useState('')
   const [submitting, setSubmitting] = useState(false)
-  const { toast } = useToast()
+  const { toast } = Toast()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
