@@ -29,7 +29,7 @@ const faculty = [
     image: "/placeholder.svg?height=100&width=100&text=AN"
   },
   {
-    name: "Mrs. Celeste G",
+    name: "Ms. Celeste G",
     title: "Head of Undergraduate Outreach",
     description: "Celeste is a frog who enjoys hopping around all day. You can see her by the river.",
     image: "../public/faculty/butter.png"
