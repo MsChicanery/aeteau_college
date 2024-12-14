@@ -1,5 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+// Import Image component
+import Image from 'next/image'
+
+// Import your image
+import butter from '../public/butter.svg'
 
 const faculty = [
   {
@@ -18,7 +23,7 @@ const faculty = [
     name: "Dr. Butter A. Osmanli",
     title: "Dean of Osmanli School Of Law",
     description: "Handles the school of law, and runs the IT department. Also teaches band classes.S",
-    image: "faculty/butter.png"
+    image: "butter"
   },
   {
     name: "Prof. Astro Ninja",
