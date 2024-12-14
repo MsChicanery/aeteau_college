@@ -15,9 +15,9 @@ const faculty = [
     image: "/placeholder.svg?height=100&width=100&text=EC"
   },
   {
-    name: "Dr. Tall McHighIQ",
-    title: "Dean of the School of College",
-    description: "6'7\" tall with an IQ of 160. Specializes in rankings sciences and college consulting.",
+    name: "Dr. Butter A. Osmanli",
+    title: "Dean of Osmanli School Of Law",
+    description: "Handles the school of law, and runs the IT department. Also teaches band classes.S",
     image: "/placeholder.svg?height=100&width=100&text=TM"
   },
   {
