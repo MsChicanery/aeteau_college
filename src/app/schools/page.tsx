@@ -19,8 +19,8 @@ const schools = [
     name: "School of Astrology",
     description: "Unraveling the mysteries of the cosmos and beyond.",
     dean: "Dr. Orion Vega",
-    majors: ["Portal Astrology", "Inspect Element Astrology", "Email Astrology"],
-    minors: ["Celestial Mapping", "Astrological Communication"],
+    majors: ["Portal Astrology","Women"],
+    minors: ["Inspect Element", "Email Astrology"],
   },
   {
     name: "School of College",
