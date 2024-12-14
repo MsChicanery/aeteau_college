@@ -21,6 +21,11 @@ const schools = [
     description: "Meta-education at its finest, where we study the art of studying.",
     majors: ["Admissions", "College Consulting", "Rankings Sciences", "Dual Enrollment Studies"],
   },
+   {
+    name: "Femboy Computer Science School",
+    description: "Aeteau University’s competitive computer science program is renowned for its rigorous curriculum and emphasis on innovation. Students are immersed in a diverse range of topics, from foundational algorithms and data structures to cutting-edge fields like artificial intelligence, cybersecurity, and quantum computing. With a strong focus on hands-on learning, the program encourages collaboration through research projects, hackathons, and industry partnerships. Faculty members are leaders in their fields, providing mentorship and opportunities to engage in groundbreaking research. The program’s graduates are highly sought after by top tech companies and graduate schools, making Aeteau University a premier destination for aspiring computer scientists.",
+    majors: ["Computer Engineering", "Computer Science", "Electrical Engineering", "UI/UX Design"],
+  },
 ];
 
 export default function Schools() {
