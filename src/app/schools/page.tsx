@@ -9,18 +9,11 @@ const schools = [
     minors: ["Interdimensional Design", "Experimental Sculpture"],
   },
   {
-    name: "Ismay School of Design",
-    description: "Empowering students to create impactful and timeless designs.",
-    dean: "Prof. Eliza Monroe",
-    majors: ["Graphic Design", "Industrial Design"],
-    minors: ["Interactive Media", "Sustainable Design"],
-  },
-  {
     name: "Celestial School of Astrology",
     description: "Delving into the cosmic tapestry to uncover the universe's secrets.",
     dean: "Dr. Orion Vega",
-    majors: ["Stellar Cartography", "Astrological Studies"],
-    minors: ["Elemental Mysticism", "Email Astrology"],
+    majors: [Portal Astrology],
+    minors: ["Inspect Element Astrology", "Email Astrology"],
   },
   {
     name: "School of Meta-Education",
