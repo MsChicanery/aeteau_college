@@ -12,7 +12,7 @@ const schools = [
     name: "Celestial School of Astrology",
     description: "Delving into the cosmic tapestry to uncover the universe's secrets.",
     dean: "Dr. Orion Vega",
-    majors: [Portal Astrology],
+    majors: ["Portal Astrology"],
     minors: ["Inspect Element Astrology", "Email Astrology"],
   },
   {
