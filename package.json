@@ -1,0 +1,26 @@
+{
+  "name": "aeteau_college",
+  "version": "0.1.0",
+  "description": "A college website for the gayest of colleges!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KKbutter2281/aeteau_college.git"
+  },
+  "keywords": [
+    "website",
+    "college",
+    "a2c",
+    "meme",
+    "gay"
+  ],
+  "author": "KKbutter2281, SuperPhantomUser, Carly, The A2 Community",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KKbutter2281/aeteau_college/issues"
+  },
+  "homepage": "https://github.com/KKbutter2281/aeteau_college#readme"
+}
