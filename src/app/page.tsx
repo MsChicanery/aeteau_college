@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div>
+    
       <Hero
         title="Welcome to Aeteau College"
         subtitle=""nos nescio quomodo latine loqui""
@@ -109,7 +109,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    
   )
 }
 
