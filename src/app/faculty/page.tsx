@@ -32,7 +32,7 @@ const faculty = [
     name: "Ms. Celeste G",
     title: "Head of Undergraduate Outreach",
     description: "Celeste is a frog who enjoys hopping around all day. You can see her by the river.",
-    image: "../public/faculty/butter.png"
+    image: "faculty/butter.png"
   },
   
 ]
