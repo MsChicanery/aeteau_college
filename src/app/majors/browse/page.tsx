@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router'; 
 import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorDetailPage = () => {
