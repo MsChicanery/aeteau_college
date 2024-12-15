@@ -2,7 +2,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import majors from '../src/data/majors'; // Ensure only one import for majors data
+import majors from '@/data/Majors'; // Ensure only one import for majors data
 
 const Home = () => {
   const [sortBy, setSortBy] = useState<'school' | 'type' | 'name'>('name');
