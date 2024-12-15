@@ -20,7 +20,7 @@ const faculty = [
     name: "Dr. Butter A. Osmanli",
     title: "Dean of Osmanli School Of Law",
     description: "Butter Osmanli is a troll from under the bridge. You can see him posting memes all over A2C in the worst ways possible.",
-    image: "../public/faculty/butter.png"
+    image: "faculty/butter.png"
   },
   {
     name: "Dr. Carly T",
