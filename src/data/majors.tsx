@@ -1,5 +1,5 @@
 {
-  "majors" [
+  "majors": [
     {
       "school": "School of Arts and Sciences",
       "type": "Major",
