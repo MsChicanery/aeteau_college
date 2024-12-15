@@ -23,10 +23,10 @@ const faculty = [
     image: "faculty/butter.png"
   },
   {
-    name: "Dr. Carly T",
+    name: "JP Kapth",
     title: "Dean of Admissions",
-    description: "Carly T. is a professional skateboarder from the city of Dani located in California. She has a PHD in Discord Moderation and has studied Server Design at Cambridge. ",
-    image: "/placeholder.svg?height=100&width=100&text=AN"
+    description: "JP is a professional yapper, acquiring her PhD in Pasadena. She likes to use comic sans on her powerpoints for meetings.",
+    image: "faculty/jp.png"
   },
   {
     name: "Ms. Celeste G",
