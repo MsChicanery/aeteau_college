@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Link } from 'react-router-dom';
 import majors from '@/data/majors'; // Adjust the import path as needed
