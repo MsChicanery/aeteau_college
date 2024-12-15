@@ -1,7 +1,7 @@
 // pages/index.tsx
 'use client';
 import { useState } from 'react';
-import majorsData from '../majors';
+import majorsData from '@/data/majors';
 import Link from 'next/link';
 
 interface Major {
