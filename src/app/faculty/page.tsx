@@ -11,10 +11,10 @@ const faculty = [
     image: "faculty/carly.png"
   },
   {
-    name: "Prof. Kokoro Nashi",
-    title: "Dean of Computer Science",
-    description: "Lorem Ipusem Dolor Sit Amet",
-    image: "/placeholder.svg?height=100&width=100&text=EC"
+    name: "R. Heatran",
+    title: "Dean Of Undergraduate Research",
+    description: "Heatran only leaves Stark Mountain Chamber every five days to restock his mini-fridge with Kool-Aid and Caprisun. During his free time, he likes to go lava fishing with his buddy Groudon.",
+    image: "faculty/heatran.png"
   },
   {
     name: "Dr. Butter A. Osmanli",
