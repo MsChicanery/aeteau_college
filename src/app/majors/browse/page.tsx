@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'; // Importing the useRouter hook from Next.js
 import majors from '@/data/majors'; // Adjust the import path as needed
 
@@ -8,7 +8,20 @@ const MajorDetailPage = () => {
   const router = useRouter();
   const { name } = router.query;  // Extract the 'name' query parameter
 
-  // Check if name is available, if not return a loading or error state
+  // State to track if the component has mounted
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Use useEffect to ensure the component runs only on the client-side
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // If the component is not yet mounted, return null or a loading state
+  if (!isMounted) {
+    return <div>Loading...</div>;
+  }
+
+  // Check if the 'name' is available
   if (!name) {
     return <div>Loading...</div>;
   }
