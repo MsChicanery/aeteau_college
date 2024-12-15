@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import majors from './data/majors'; // Adjust the import path as needed
+import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorDetailPage = () => {
   const location = useLocation();
