@@ -1,13 +1,17 @@
 'use client'
 
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { useRouter } from 'next/router'; 
+import { useRouter } from 'next/router'; // Importing the useRouter hook from Next.js
 import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorDetailPage = () => {
   const router = useRouter();
   const { name } = router.query;  // Extract the 'name' query parameter
+
+  // Check if name is available, if not return a loading or error state
+  if (!name) {
+    return <div>Loading...</div>;
+  }
 
   // Find the major based on the name
   const major = majors.find(m => m.name === name);
