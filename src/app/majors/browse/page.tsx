@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import majors from './data/majors'; // Adjust the import path as needed
+import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorsPage = () => {
   return (
