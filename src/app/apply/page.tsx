@@ -7,40 +7,38 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
-import { Toast } from "@/components/ui/toast"
 
 export default function Apply() {
   const [height, setHeight] = useState('')
   const [iqScore, setIqScore] = useState('')
   const [discordUsername, setDiscordUsername] = useState('')
   const [submitting, setSubmitting] = useState(false)
-  const { toast } = useToast()
+  const [notification, setNotification] = useState({ message: '', variant: '' })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
+    setNotification({ message: '', variant: '' })
 
     if (parseFloat(height) < 5.4) {
-      toast({
-        title: "Application Error",
-        description: "Sorry, applicants under 5'4\" cannot apply.",
-        variant: "destructive",
+      setNotification({
+        message: "Sorry, applicants under 5'4\" cannot apply.",
+        variant: "error",
       })
       setSubmitting(false)
       return
     }
     if (parseInt(iqScore) < 145) {
-      toast({
-        title: "Application Error",
-        description: "Sorry, applicants must have an IQ of 145 or higher.",
-        variant: "destructive",
+      setNotification({
+        message: "Sorry, applicants must have an IQ of 145 or higher.",
+        variant: "error",
       })
       setSubmitting(false)
       return
     }
 
     const formData = new FormData(e.target as HTMLFormElement)
-    
+
     try {
       const response = await fetch('/api/submit-application', {
         method: 'POST',
@@ -48,23 +46,21 @@ export default function Apply() {
       })
 
       if (response.ok) {
-        toast({
-          title: "Application Submitted",
-          description: "Good luck in the American Ninja Warrior course and the chess match against our grandmaster!",
+        setNotification({
+          message: "Good luck in the American Ninja Warrior course and the chess match against our grandmaster!",
+          variant: "success",
         })
       } else {
-        toast({
-          title: "Submission Error",
-          description: "There was an error submitting your application. Please try again.",
-          variant: "destructive",
+        setNotification({
+          message: "There was an error submitting your application. Please try again.",
+          variant: "error",
         })
       }
     } catch (error) {
       console.error('Error submitting application:', error)
-      toast({
-        title: "Submission Error",
-        description: "There was an error submitting your application. Please try again.",
-        variant: "destructive",
+      setNotification({
+        message: "There was an error submitting your application. Please try again.",
+        variant: "error",
       })
     }
 
@@ -73,6 +69,15 @@ export default function Apply() {
 
   return (
     <div className="container mx-auto p-4 max-w-2xl">
+      {notification.message && (
+        <div
+          className={`mb-4 p-4 rounded text-white ${
+            notification.variant === 'error' ? 'bg-red-500' : 'bg-green-500'
+          }`}
+        >
+          {notification.message}
+        </div>
+      )}
       <Card>
         <CardHeader>
           <CardTitle className="text-3xl font-bold text-center">Apply to Aeteau College</CardTitle>
@@ -86,11 +91,26 @@ export default function Apply() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="height">Height (in feet)</Label>
-              <Input type="number" id="height" name="height" step="0.1" required value={height} onChange={(e) => setHeight(e.target.value)} />
+              <Input
+                type="number"
+                id="height"
+                name="height"
+                step="0.1"
+                required
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor="iq">IQ Score</Label>
-              <Input type="number" id="iq" name="iq" required value={iqScore} onChange={(e) => setIqScore(e.target.value)} />
+              <Input
+                type="number"
+                id="iq"
+                name="iq"
+                required
+                value={iqScore}
+                onChange={(e) => setIqScore(e.target.value)}
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor="secretaries">Name every single Secretary of State since America's founding</Label>
@@ -102,21 +122,27 @@ export default function Apply() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="discord">Discord Username</Label>
-              <Input type="text" id="discord" name="discord" required value={discordUsername} onChange={(e) => setDiscordUsername(e.target.value)} />
+              <Input
+                type="text"
+                id="discord"
+                name="discord"
+                required
+                value={discordUsername}
+                onChange={(e) => setDiscordUsername(e.target.value)}
+              />
             </div>
             <div className="flex items-center space-x-2">
               <Checkbox id="twin" name="twin" />
-              <Label htmlFor="twin">I have a twin also applying (we agree to fight on national television for admission)</Label>
+              <Label htmlFor="twin">
+                I have a twin also applying (we agree to fight on national television for admission)
+              </Label>
             </div>
+            <Button type="submit" disabled={submitting} className="w-full">
+              {submitting ? 'Submitting...' : 'Submit Application'}
+            </Button>
           </form>
         </CardContent>
-        <CardFooter>
-          <Button type="submit" disabled={submitting} className="w-full">
-            {submitting ? 'Submitting...' : 'Submit Application'}
-          </Button>
-        </CardFooter>
       </Card>
     </div>
   )
 }
-
