@@ -5,12 +5,12 @@ import { useLocation } from 'react-router-dom';
 import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorDetailPage = () => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const majorName = queryParams.get('name');
-  
-  const major = majors.find(m => m.name === majorName);
-  
+  const router = useRouter();
+  const { name } = router.query;  // Extract the 'name' query parameter
+
+  // Find the major based on the name
+  const major = majors.find(m => m.name === name);
+
   if (!major) {
     return <div>Major not found!</div>;
   }
