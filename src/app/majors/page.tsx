@@ -1,11 +1,8 @@
 // pages/index.tsx
 'use client';
 import { useState } from 'react';
-import majorsData from '@/data/majors';
 import Link from 'next/link';
-
-// Import the majors data
-import majors from '../src/data/majors';
+import majors from '../src/data/majors'; // Ensure only one import for majors data
 
 const MajorsComponent = () => {
   return (
@@ -32,12 +29,11 @@ const MajorsComponent = () => {
 
 export default MajorsComponent;
 
-
 export default function Home() {
   const [sortBy, setSortBy] = useState<'school' | 'type' | 'name'>('name');
 
   // Sorting majors based on the selected criteria
-  const sortedMajors = [...majorsData.majors].sort((a, b) => {
+  const sortedMajors = [...majors].sort((a, b) => {
     if (a[sortBy] < b[sortBy]) return -1;
     if (a[sortBy] > b[sortBy]) return 1;
     return 0;
@@ -64,9 +60,9 @@ export default function Home() {
 
       {/* Majors Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortedMajors.map((major: Major) => (
+        {sortedMajors.map((major, index) => (
           <div
-            key={major.name}
+            key={index}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
           >
             <img
