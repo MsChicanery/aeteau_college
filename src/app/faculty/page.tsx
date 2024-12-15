@@ -4,11 +4,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from 'next/image'
 
 const faculty = [
-  {
-    name: "Dr. Aquarius Blahaj",
+{
+    name: "Dr. Carly T",
     title: "President",
-    description: "Former Olympic swimmer and chess grandmaster. Holds the record for treading water (72 hours).",
-    image: "/placeholder.svg?height=100&width=100&text=AB"
+    description: "Carly T. is a professional skateboarder from the city of Dani located in California. She has a PHD in Discord Moderation and has studied Server Design at Cambridge. ",
+    image: "/placeholder.svg?height=100&width=100&text=AN"
   },
   {
     name: "Prof. Kokoro Nashi",
