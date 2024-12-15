@@ -4,14 +4,34 @@ import { useState } from 'react';
 import majorsData from '@/data/majors';
 import Link from 'next/link';
 
-interface Major {
-  school: string;
-  type: string;
-  name: string;
-  image_link: string;
-  description: string;
-  required_courses: string[];
-}
+// Import the majors data
+import majors from '../src/data/majors';
+
+const MajorsComponent = () => {
+  return (
+    <div>
+      <h1>Available Majors</h1>
+      <ul>
+        {majors.map((major, index) => (
+          <li key={index}>
+            <h2>{major.name}</h2>
+            <p>{major.description}</p>
+            <img src={major.image_link} alt={major.name} />
+            <h3>Required Courses:</h3>
+            <ul>
+              {major.required_courses.map((course, idx) => (
+                <li key={idx}>{course}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default MajorsComponent;
+
 
 export default function Home() {
   const [sortBy, setSortBy] = useState<'school' | 'type' | 'name'>('name');
