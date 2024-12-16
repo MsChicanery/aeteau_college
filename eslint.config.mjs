@@ -19,7 +19,7 @@ const eslintConfig = [
       'no-console': 'off',
       'no-extra-semi': 'off',
       '@next/next/no-img-element': 'off',
-      'react/jsx-no-duplicate-props'
+      'react/jsx-no-duplicate-props': 'off',
       // Add any other rules you want to disable here
     },
   }),
