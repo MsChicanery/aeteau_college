@@ -1,47 +1,59 @@
-import { SchoolTab } from "@/components/SchoolTab";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import schools from "@/data/schools"
+import majors from "@/data/majors";
+import Image from "next/image"
 
-const schools = [
-  {
-    name: "Westcote School of Arts",
-    description: "An avant-garde institution exploring innovative and interdisciplinary artistic expression.",
-    dean: "Dr. Artemis Vale",
-    majors: ["Digital Arts", "Creative Writing"],
-    minors: ["Interdimensional Design", "Experimental Sculpture"],
-  },
-  {
-    name: "Celestial School of Astrology",
-    description: "Delving into the cosmic tapestry to uncover the universe's secrets.",
-    dean: "Dr. Orion Vega",
-    majors: ["Portal Astrology"],
-    minors: ["Inspect Element Astrology", "Email Astrology"],
-  },
-  {
-    name: "School of College",
-    description: "Exploring the methodologies and philosophies behind higher education.",
-    dean: "Dr. Linus Capstone",
-    majors: ["Admissions Strategy", "College Consulting", "Ranking Sciences", "Dual Enrollment Studies"],
-    minors: ["Academic Leadership", "Higher Education Policy"],
-  },
-  {
-    name: "Aeteau College of Computer Science",
-    description: "A rigorous and innovative program emphasizing cutting-edge technology and collaboration.",
-    dean: "Dr. Linus Capstone",
-    majors: ["Artificial Intelligence", "Cybersecurity", "Quantum Computing", "Software Engineering"],
-    minors: ["Data Science", "Human-Computer Interaction"],
-  },
-];
-
-export default function Schools() {
+export default function CollegeMajorsShowcase() {
   return (
-    <div className="container mx-auto p-4 py-16">
-      <h1 className="text-4xl font-bold mb-8 text-center">Our Schools</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {schools.map((school) => (
-          <div key={school.name} className="school-card">
-            <SchoolTab {...school} />
-          </div>
-        ))}
-      </div>
+    <div className="container mx-auto py-8">
+      <h1 className="text-3xl font-bold mb-8 text-center">College Schools and Majors Showcase</h1>
+      {schools.map((school) => (
+        <Card key={school.name} className="mb-8">
+          <CardHeader>
+            <CardTitle>{school.name}</CardTitle>
+            <CardDescription>{school.description}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <p><strong>Dean:</strong> {school.dean}</p>
+                <p><strong>Founded:</strong> {school.foundedYear}</p>
+                <p><strong>Total Students:</strong> {school.totalStudents}</p>
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-4">Majors and Programs</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {majors
+                .filter((major) => major.school === school.name)
+                .map((major) => (
+                  <Card key={major.name} className="h-full">
+                    <CardHeader>
+                      <CardTitle className="text-lg">{major.name}</CardTitle>
+                      <Badge>{major.type}</Badge>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="aspect-w-16 aspect-h-9 mb-4">
+                        <Image
+                          src={major.image_link}
+                          alt={major.name}
+                          layout="fill"
+                          objectFit="cover"
+                          className="rounded-md"
+                        />
+                      </div>
+                      <p className="text-sm mb-2">{major.description}</p>
+                      <p className="text-sm"><strong>Degree:</strong> {major.degree_type}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
+          </CardContent>
+        </Card>
+      ))}
     </div>
-  );
+  )
 }
+
+{ }
+
