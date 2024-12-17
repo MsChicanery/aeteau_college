@@ -4,6 +4,7 @@ interface School {
   name: string
   description: string
   majors: string[]
+  minors: string[]
 }
 
 interface SchoolListProps {
