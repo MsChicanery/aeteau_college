@@ -1,18 +1,21 @@
 'use client'
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorDetailPage = () => {
   const router = useRouter();
   const { name } = router.query;
 
-  if (!name) {
+  // Ensure name is a single string
+  const majorName = Array.isArray(name) ? name[0] : name;
+
+  if (!majorName) {
     return <div>Loading...</div>;
   }
 
   // Find the major based on the name
-  const major = majors.find(m => m.name.toLowerCase() === name.toLowerCase());
+  const major = majors.find(m => m.name.toLowerCase() === majorName.toLowerCase());
 
   if (!major) {
     return <div>Major not found!</div>;
