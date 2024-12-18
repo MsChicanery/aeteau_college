@@ -34,6 +34,13 @@ const schools = [
     foundedYear: 1935,
     totalStudents: 1200,
   },
+  {
+    name: "Ponzi School of Scamming",
+    description: "The Ponzi School of Scamming teaches you how to generate vast quantities of wealth in the current day and age.",
+    dean: "Dr. Charles P. Bianchi",
+    foundedYear: 1040,
+    totalStudents: 1882,
+  },
 ];
 
 export default schools;
