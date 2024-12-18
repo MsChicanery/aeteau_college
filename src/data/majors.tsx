@@ -147,6 +147,36 @@ const majors = [
       "Motion Graphics",
       "Portfolio Development"
     ]
+  },
+  {
+    "school": "Ponzi School of Scamming",
+    "type": "Major",
+    "name": "Modern-Day Income Generation",
+    "image_link": "https://media.wired.com/photos/6390c68caa4a1f0bae395c46/master/w_2240,c_limit/Scammers-Scamming-Scammers-Security-GettyImages-83393803.jpg",
+    "description": "Generating income in the modern day at a much better rate than investment portfolios, a 9-5, or traditional savings accounts.",
+    "degree_type": "Bachelor of Income Tactfullness (B.A.I.T.)",
+    "program_highlights": [
+      "Industry-leading insights on wealth generation",
+      "Seminars with industry ecperts, including Andrew Tate, Hailey Welch and Tai Lopez",
+      "Information that can be implemented in projects on day 1",
+      "Award-winning instructors"
+    ],
+    "career_opportunities": [
+      "Politician",
+      "Blockchain Lead",
+      "Head of Pyramidal Enterprises",
+      "Chief Executive Officer"
+    ],
+    "required_courses": [
+      "Economics 101",
+      "Ancient Egyptian Architecture",
+      "Horse and Sparrow Economics",
+      "Statistics 102",
+      "Public Speaking",
+      "Dropshipping",
+      "Copywriting",
+      "Affiliate Marketing"
+    ]
   }
 ];
 
