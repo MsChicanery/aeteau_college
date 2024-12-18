@@ -34,6 +34,12 @@ const faculty = [
     description: "Celeste is a frog who enjoys hopping around all day. You can see her by the river.",
     image: "faculty/celeste.png"
   },
+  {
+    name: "DirectXbox",
+    title: "Dean of the Ponzi School of Scamming",
+    description: "DirectXbox, also knows as Charles P. Bianci, is a certified dumbass.",
+    image: "faculty/directxbox.png"
+  },
   
 ]
 
