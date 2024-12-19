@@ -3,7 +3,7 @@ const majors = [
     "school": "School of Arts and Sciences",
     "type": "Major",
     "name": "Biology",
-    "image_link": "https://example.com/images/biology.jpg",
+    "image_link": "majors/default.png",
     "description": "Biology is the study of living organisms, including their structure, function, growth, evolution, and distribution. This major prepares students for careers in healthcare, research, and environmental science.",
     "degree_type": "Bachelor of Science (B.S.)",
     "program_highlights": [
@@ -33,7 +33,7 @@ const majors = [
     "school": "School of Engineering",
     "type": "Major",
     "name": "Mechanical Engineering",
-    "image_link": "https://example.com/images/mechanical_engineering.jpg",
+    "image_link": "majors/default.png",
     "description": "Mechanical Engineering involves the design, analysis, and manufacturing of mechanical systems. It combines principles of physics, mathematics, and material science to create efficient machines and tools.",
     "degree_type": "Bachelor of Science (B.S.)",
     "program_highlights": [
@@ -63,7 +63,7 @@ const majors = [
     "school": "School of Business",
     "type": "Major",
     "name": "Marketing",
-    "image_link": "https://example.com/images/marketing.jpg",
+    "image_link": "majors/default.png",
     "description": "Marketing focuses on the strategies and techniques used to promote products and services. Students learn about consumer behavior, market research, branding, and digital marketing.",
     "degree_type": "Bachelor of Business Administration (B.B.A.)",
     "program_highlights": [
@@ -93,7 +93,7 @@ const majors = [
     "school": "School of Humanities",
     "type": "Minor",
     "name": "Philosophy",
-    "image_link": "https://example.com/images/philosophy.jpg",
+    "image_link": "majors/default.png",
     "description": "Philosophy explores fundamental questions about existence, knowledge, values, reason, and ethics. This minor encourages critical thinking and logical analysis.",
     "degree_type": "Minor Program",
     "program_highlights": [
@@ -122,7 +122,7 @@ const majors = [
     "school": "School of Fine Arts",
     "type": "Major",
     "name": "Graphic Design",
-    "image_link": "https://example.com/images/graphic_design.jpg",
+    "image_link": "majors/default.png",
     "description": "Graphic Design combines art and technology to create visual content for communication. Students develop skills in typography, layout, and digital media.",
     "degree_type": "Bachelor of Fine Arts (B.F.A.)",
     "program_highlights": [
@@ -152,7 +152,7 @@ const majors = [
     "school": "Ponzi School of Scamming",
     "type": "Major",
     "name": "Modern-Day Income Generation",
-    "image_link": "https://media.wired.com/photos/6390c68caa4a1f0bae395c46/master/w_2240,c_limit/Scammers-Scamming-Scammers-Security-GettyImages-83393803.jpg",
+    "image_link": "majors/default.png",
     "description": "Generating income in the modern day at a much better rate than investment portfolios, a 9-5, or traditional savings accounts.",
     "degree_type": "Bachelor of Income Tactfullness (B.A.I.T.)",
     "program_highlights": [
@@ -182,7 +182,7 @@ const majors = [
     "school": "School of Engineering",
     "type": "Major",
     "name": "Social Engineering",
-    "image_link": "https://www.thesslstore.com/blog/wp-content/uploads/2020/04/social-engineering-hacking.jpg",
+    "image_link": "majors/default.png",
     "description": "Social Engineering is a cross-disciplinary program that combines the technical precision of engineering with the insights of sociology and psychology to design, organize, and influence human behavior in complex social systems. Students will explore the intersection of technology, human interaction, and societal structures, using advanced analytical tools and a deep understanding of human nature to solve modern problems.",
     "degree_type": "Bachelor of Science (B.S.)",
     "program_highlights": [
