@@ -177,6 +177,36 @@ const majors = [
       "Copywriting",
       "Affiliate Marketing"
     ]
+  },
+    {
+    "school": "School of Engineering",
+    "type": "Major",
+    "name": "Social Engineering",
+    "image_link": "https://www.thesslstore.com/blog/wp-content/uploads/2020/04/social-engineering-hacking.jpg",
+    "description": "Social Engineering is a cross-disciplinary program that combines the technical precision of engineering with the insights of sociology and psychology to design, organize, and influence human behavior in complex social systems. Students will explore the intersection of technology, human interaction, and societal structures, using advanced analytical tools and a deep understanding of human nature to solve modern problems.",
+    "degree_type": "Bachelor of Science (B.S.)",
+    "program_highlights": [
+      "Combines the mathematical rigor of an engineering course with the soft skills of sociology",
+      "Engage in real-world projects to create and solve problems in marketing, cybersecurity, public policy, and organizational design.",
+      "Analyze and model human behavior using cutting-edge data science and AI techniques",
+      "Applicable both in the workplace and in your personal life"
+    ],
+    "career_opportunities": [
+      "Marketing Strategist",
+      "Politician",
+      "Human Resources Specialist",
+      "Propaganda Expert"
+    ],
+    "required_courses": [
+      "Human Dynamics",
+      "Psychology 101",
+      "Multivariable Calculus",
+      "Statistics 102",
+      "Behavioral Economics",
+      "Cybersecurity 101",
+      "Gender Studies",
+      "Romantic Chemistry"
+    ]
   }
 ];
 
