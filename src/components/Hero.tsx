@@ -14,7 +14,7 @@ export function Hero({ title, subtitle, ctaText, ctaLink, imageSrc }: HeroProps)
   return (
     <section className="relative h-[80vh] flex items-center justify-center text-white">
       <Image
-        src={imageSrc}
+        src="banner.png"
         layout="fill"
         objectFit="cover"
         alt="Hero background"
