@@ -1,11 +1,10 @@
-'use client'
+'use client';
 
-import { useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorDetailPage = () => {
-  const router = useRouter();
-  const { name } = router.query;
+  const { name } = useParams(); // Use useParams to access the dynamic route parameters
 
   // Ensure name is a single string
   const majorName = Array.isArray(name) ? name[0] : name;
