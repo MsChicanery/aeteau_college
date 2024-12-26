@@ -4,7 +4,8 @@ import { useParams } from 'next/navigation';
 import majors from '@/data/majors'; // Adjust the import path as needed
 
 const MajorDetailPage = () => {
-  const { name } = useParams(); // Use useParams to access the dynamic route parameters
+  const params = useParams(); // Get dynamic route parameters
+  const { name } = params || {}; // Extract name from params
 
   // Ensure name is a single string
   const majorName = Array.isArray(name) ? name[0] : name;
