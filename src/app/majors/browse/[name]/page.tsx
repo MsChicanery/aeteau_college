@@ -3,6 +3,15 @@
 import { useParams } from 'next/navigation';
 import majors from '@/data/majors'; // Adjust the import path as needed
 
+const isValidUrl = (url) => {
+  try {
+    new URL(url);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
 const MajorDetailPage = () => {
   const params = useParams(); // Get dynamic route parameters
   const { name } = params || {}; // Extract name from params
@@ -21,10 +30,13 @@ const MajorDetailPage = () => {
     return <div>Major not found!</div>;
   }
 
+  // Validate image URL
+  const imageUrl = isValidUrl(major.image_link) ? major.image_link : '/default-image.png'; // Fallback image
+
   return (
     <div>
       <h1>{major.name}</h1>
-      <img src={major.image_link} alt={major.name} style={{ width: '300px' }} />
+      <img src={imageUrl} alt={major.name} style={{ width: '300px' }} />
       <h2>Description</h2>
       <p>{major.description}</p>
       <h2>Program Highlights</h2>
