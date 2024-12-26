@@ -33,15 +33,6 @@ export default function CollegeMajorsShowcase() {
                       <Badge>{major.type}</Badge>
                     </CardHeader>
                     <CardContent>
-                      <div className="relative w-full h-0 pb-[56.25%] mb-4"> {/* Aspect ratio 16:9 */}
-                        <Image
-                          src={major.image_link}
-                          alt={major.name}
-                          fill
-                          style={{ objectFit: 'cover' }}
-                          className="rounded-md"
-                        />
-                      </div>
                       <p className="text-sm mb-2">{major.description}</p>
                       <p className="text-sm"><strong>Degree:</strong> {major.degree_type}</p>
                     </CardContent>
