@@ -1,39 +1,38 @@
 const majors = [
   {
-    "school": "School of Arts and Sciences",
+    "school": "School of Astrology",
     "type": "Major",
-    "name": "Biology",
-    "image_link": "https://example.com/images/biology.jpg",
-    "description": "Biology is the study of living organisms, including their structure, function, growth, evolution, and distribution. This major prepares students for careers in healthcare, research, and environmental science.",
+    "name": "Portal Astrology",
+    "image_link": "https://example.com/images/biology.jpg", // Change image
+    "description": "Portal astrology focuses on deciphering the early signals of a college admissions decision. From inspecting code to examining checklists, students will learn cutting-edge techniques to unravel what college admissions offices are really hiding.",
     "degree_type": "Bachelor of Science (B.S.)",
     "program_highlights": [
       "Hands-on laboratory experience",
       "Opportunities for undergraduate research",
-      "Fieldwork in diverse ecosystems",
-      "Interdisciplinary approach integrating biology with chemistry and physics"
+      "Fieldwork in a diverse array of platforms",
+      "Interdisciplinary approach integrating digital forensics and pyschology" // Need smth better for this lol
     ],
     "career_opportunities": [
-      "Medical Doctor",
-      "Research Scientist",
-      "Environmental Consultant",
-      "Biotechnologist",
-      "Public Health Analyst"
+      "Admissions Cryptographer",
+      "Ethical Portal Hacker",
+      "Astrotechnologist",
+      "Checklist Engineer",
+      "IDOC Specialist"
     ],
-    "required_courses": [
-      "General Biology I & II",
-      "Genetics",
-      "Microbiology",
-      "Ecology",
-      "Cell Biology",
-      "Organic Chemistry",
-      "Biostatistics"
+    "required_courses": [ // Change to courses in major or smth like that vs general required
+      "PTAS 102: Processing Modern Portal Astrology",
+      "PTAS 103: Early Hints",
+      "PTAS 202: Completing Acceptances",
+      "PTAS 300: Choosing Between Resources",
+      "PTAS 403: The Forbidden Path",
+      "PTAS 409: Dealing with Conflicting Signals"
     ]
   },
   {
-    "school": "School of Engineering",
+    "school": "School of College",
     "type": "Major",
-    "name": "Mechanical Engineering",
-    "image_link": "https://example.com/images/mechanical_engineering.jpg",
+    "name": "Application Sciences",
+    "image_link": "https://example.com/images/mechanical_engineering.jpg", // Change image
     "description": "Mechanical Engineering involves the design, analysis, and manufacturing of mechanical systems. It combines principles of physics, mathematics, and material science to create efficient machines and tools.",
     "degree_type": "Bachelor of Science (B.S.)",
     "program_highlights": [
