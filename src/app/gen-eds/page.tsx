@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
-import { GraduationCap, BookOpen, Users, Globe, Code, Flask, Language, Heart } from 'lucide-react';
+import { GraduationCap, BookOpen, Users, Code, Flask, Language, Heart } from 'lucide-react';
 
 const generalEducation = {
   image_link: '/path-to-your-image.png', // Replace with your image link
@@ -149,3 +149,64 @@ const GeneralEducationPage = () => {
                       </li>
                     ))}
                   </ul>
+                </ScrollArea>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-6">
+                <SectionHeader icon={Heart} title="Health and Wellness" />
+                <ScrollArea className="h-64">
+                  <ul className="space-y-3">
+                    {generalEducation.health_wellness.map((course, index) => (
+                      <li key={index} className="flex gap-2">
+                        <span className="text-primary">•</span>
+                        <span>{course}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Separator className="my-8" />
+
+          <Card>
+            <CardContent className="pt-6">
+              <SectionHeader icon={BookOpen} title="Required Courses" />
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {generalEducation.required_courses.map((course, index) => (
+                  <Card key={index} className="bg-muted">
+                    <CardContent className="p-4">
+                      <p className="text-sm">{course}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Separator className="my-8" />
+
+          <Card>
+            <CardContent className="pt-6">
+              <SectionHeader icon={Code} title="Elective Courses" />
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {generalEducation.elective_courses.map((course, index) => (
+                  <Card key={index} className="bg-muted">
+                    <CardContent className="p-4">
+                      <p className="text-sm">{course}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+
+export default GeneralEducationPage;
