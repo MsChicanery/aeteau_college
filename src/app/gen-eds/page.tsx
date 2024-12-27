@@ -26,7 +26,7 @@ const generalEducation = {
   ]
 };
 
-const isValidUrl = (url) => {
+const isValidUrl = (url: string): boolean => {
   try {
     new URL(url);
     return true;
@@ -34,6 +34,7 @@ const isValidUrl = (url) => {
     return false;
   }
 };
+
 
 const SectionHeader = ({ icon: Icon, title }) => (
   <div className="flex items-center gap-2 mb-4">
