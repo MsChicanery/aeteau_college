@@ -15,14 +15,14 @@ const dorms = [
   },
   {
     name: "Doom Towers",
-    description: "Doom about getting into Aeteau while at Aeteau! Right next to the admissions building, doom towers has the fastest connection of any building to the servers, so you will know when you got into the university you already got into!v",
+    description: "Doom about getting into Aeteau while at Aeteau! Right next to the admissions building, doom towers has the fastest connection of any building to the servers, so you will know when you got into the university you already got into!",
     location: "Admissions Building",
     capacity: 100,
     price: 750,
     image: "/dorms/doom-towers.jpg",
     amenities: [
       { name: "Wi-Fi", type: "Direct", description: "Directly connected to the admissions building! Average responce times between you and the admissions buildings are 3 milliseconds!" },
-      { name: "Wake Up Alarm", type: "Doom", description: "Every 15 to 30 minutes at random, a large speaker yells "DOOM" at 175 decibles. This keeps you up all day so you can get the admissions decision you already have!" },
+      { name: "Wake Up Alarm", type: "Doom", description: "Every 15 to 30 minutes at random, a large speaker yells \"DOOM\" at 175 decibles. This keeps you up all day so you can get the admissions decision you already have!" },
       { name: "Caffine", type: "Unlimited", description: "Unlimited coffee avalible for you to stay up all day and night waiting for the admissions decision you already have!" },
     ]
   },
