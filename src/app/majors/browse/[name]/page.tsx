@@ -1,6 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
+import { ReactNode } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -8,7 +9,7 @@ import { Separator } from '@/components/ui/separator';
 import { GraduationCap, Briefcase, BookOpen, School } from 'lucide-react';
 import majors from '@/data/majors';
 
-const isValidUrl = (url) => {
+const isValidUrl = (url: string): boolean => {
   try {
     new URL(url);
     return true;
@@ -17,7 +18,7 @@ const isValidUrl = (url) => {
   }
 };
 
-const SectionHeader = ({ icon: Icon, title }) => (
+const SectionHeader = ({ icon: Icon, title }: { icon: React.ElementType; title: string }) => (
   <div className="flex items-center gap-2 mb-4">
     <Icon className="w-5 h-5 text-primary" />
     <h2 className="text-xl font-semibold">{title}</h2>
@@ -134,3 +135,4 @@ const MajorDetailPage = () => {
 };
 
 export default MajorDetailPage;
+
