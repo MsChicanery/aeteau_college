@@ -1,10 +1,6 @@
-import { AwardIcon, UsersIcon, ZapIcon, CalendarIcon, BookOpenIcon, GlobeIcon } from 'lucide-react';
+import { AwardIcon, UsersIcon, ZapIcon } from 'lucide-react';
 import { Hero } from "@/components/Hero";
 import { FeatureCard } from "@/components/FeatureCard";
-import ProgramCard from "@/components/ProgramCard";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -39,3 +35,6 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </>
+  );
+}
