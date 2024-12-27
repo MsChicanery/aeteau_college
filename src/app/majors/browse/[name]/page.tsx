@@ -1,3 +1,4 @@
+// MajorDetailPage.tsx
 'use client';
 
 import { useParams } from 'next/navigation';
@@ -8,24 +9,30 @@ import { Separator } from '@/components/ui/separator';
 import { GraduationCap, Briefcase, BookOpen, School } from 'lucide-react';
 import majors from '@/data/majors';
 
+// Helper function to validate URLs
 const isValidUrl = (url: string): boolean => {
   try {
     new URL(url);
     return true;
-  } catch (e) {
+  } catch {
     return false;
   }
 };
 
+// Props type for SectionHeader
+interface SectionHeaderProps {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+}
 
-const SectionHeader = ({ icon: Icon, title }) => (
+const SectionHeader: React.FC<SectionHeaderProps> = ({ icon: Icon, title }) => (
   <div className="flex items-center gap-2 mb-4">
     <Icon className="w-5 h-5 text-primary" />
     <h2 className="text-xl font-semibold">{title}</h2>
   </div>
 );
 
-const MajorDetailPage = () => {
+const MajorDetailPage: React.FC = () => {
   const params = useParams();
   const { name } = params || {};
   const majorName = Array.isArray(name) ? name[0] : name;
@@ -41,7 +48,9 @@ const MajorDetailPage = () => {
   // Decode the major name from the URL
   const decodedMajorName = decodeURIComponent(majorName);
 
-  const major = majors.find(m => m.name.toLowerCase() === decodedMajorName.toLowerCase());
+  const major = majors.find(
+    (m) => m.name.toLowerCase() === decodedMajorName.toLowerCase()
+  );
 
   if (!major) {
     return (
@@ -80,7 +89,7 @@ const MajorDetailPage = () => {
         </CardHeader>
         <CardContent>
           <p className="text-lg text-muted-foreground mb-8">{major.description}</p>
-          
+
           <div className="grid gap-8 md:grid-cols-2">
             <Card>
               <CardContent className="pt-6">
