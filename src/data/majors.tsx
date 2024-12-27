@@ -30,121 +30,119 @@ const majors = [
   },
   {
     "school": "School of College",
-    "type": "Major",
-    "name": "Application Sciences",
+    "type": "Minor",
+    "name": "Essay Studies",
     "image_link": "https://example.com/images/mechanical_engineering.jpg", // Change image
-    "description": "Mechanical Engineering involves the design, analysis, and manufacturing of mechanical systems. It combines principles of physics, mathematics, and material science to create efficient machines and tools.",
-    "degree_type": "Bachelor of Science (B.S.)",
+    "description": "Essay Studies encourages students to learn about the inner workings of college essays. By combining ideation, originality, and revision, students will be able to write and analyze any college essay prompt.",
+    "degree_type": "Minor Program",
     "program_highlights": [
       "Capstone design projects",
-      "State-of-the-art labs for robotics and fluid dynamics",
-      "Internship opportunities with industry leaders",
-      "Focus on sustainable engineering solutions"
+      "State-of-the-art AI checkers",
+      "Internship opportunities with leading college admissions companies",
+      "Focus on reusable essay solutions"
     ],
-    "career_opportunities": [
-      "Mechanical Engineer",
-      "Aerospace Engineer",
-      "Automotive Engineer",
-      "Product Designer",
-      "Energy Systems Engineer"
+    "career_opportunities": [ // Need more of these
+      "Essay Editor",
+      "Prompt Engineer",
+      "???",
+      "???",
+      "???"
     ],
     "required_courses": [
-      "Statics and Dynamics",
-      "Thermodynamics",
-      "Fluid Mechanics",
-      "Materials Science",
-      "Mechanical Design",
-      "Heat Transfer",
-      "Engineering Mechanics"
+      "ADMIS 130: Application Systems",
+      "ADMIS 210: Types of Supplemental Questions",
+      "ADMIS 300: The Common App Essay",
+      "ADMIS 430: Timed College Essay Writing",
+      "ADMIS 450: AI Written Essays",
     ]
   },
   {
-    "school": "School of Business",
+    "school": "School of College",
     "type": "Major",
-    "name": "Marketing",
-    "image_link": "majors/default.png",
-    "description": "Marketing focuses on the strategies and techniques used to promote products and services. Students learn about consumer behavior, market research, branding, and digital marketing.",
-    "degree_type": "Bachelor of Business Administration (B.B.A.)",
+    "name": "Admissions", // Needs better name
+    "image_link": "majors/default.png", // Change image
+    "description": "The Admissions major focuses on the journey from prospective applicant to enrollee. Students learn what goes into the process, from initial applicant outreach to the final decision review process.",
+    "degree_type": "Bachelor of Arts (B.A.)",
     "program_highlights": [
       "Real-world case studies and simulations",
-      "Access to marketing analytics tools",
-      "Collaboration with local businesses",
-      "Specialized courses in social media marketing"
+      "Access to admissions analytics tools",
+      "Collaboration with local admissions offices",
+      "Specialized courses in college admissions marketing"
     ],
     "career_opportunities": [
-      "Marketing Manager",
-      "Brand Strategist",
-      "Digital Marketing Specialist",
-      "Market Research Analyst",
-      "Advertising Executive"
+      "Admissions Officer",
+      "A2C Content Creator",
+      "College Social Media Manager",
+      "Applicant Research Analyst",
+      "Enrollment Executive"
     ],
     "required_courses": [
-      "Principles of Marketing",
-      "Consumer Behavior",
-      "Marketing Research",
-      "Digital Marketing",
-      "Advertising and Promotion",
-      "Strategic Marketing",
-      "Sales Management"
+      "ADMIS 120: Transcript Analysis",
+      "ADMIS 160H: Unconventional Extracurriculars",
+      "ADMIS 230: Letters of Recommendation and Rejection",
+      "ADMIS 280: The Science Behind Olympiads",
+      "ADMIS 390: Merits of Scholarships",
+      "ADMIS 410: Presenting to Committee",
+      "ADMIS 510: Virtual College Admissions Communities",
     ]
   },
   {
-    "school": "School of Humanities",
+    "school": "School of College",
     "type": "Minor",
-    "name": "Philosophy",
-    "image_link": "majors/default.png",
+    "name": "Rankings Sciences",
+    "image_link": "majors/default.png", // Change image
     "description": "Philosophy explores fundamental questions about existence, knowledge, values, reason, and ethics. This minor encourages critical thinking and logical analysis.",
     "degree_type": "Minor Program",
     "program_highlights": [
       "Small, discussion-based classes",
-      "Interdisciplinary connections to law, politics, and science",
+      "Interdisciplinary connections to law, statistics, and science",
       "Opportunities for independent study and research",
-      "Focus on classical and contemporary philosophical works"
+      "???" // Need last one here
     ],
     "career_opportunities": [
-      "Ethics Consultant",
-      "Policy Analyst",
-      "Educator",
-      "Legal Researcher",
-      "Nonprofit Administrator"
+      "Chief Data Strategist, U.S. News",
+      "Common Data Set Editor, Columbia University",
+      "Dean, Temple University Fox School of Business",
+      "Senior Administrator, Claremont McKenna College",
+      "Provost, Iona University"
     ],
     "required_courses": [
-      "Introduction to Philosophy",
-      "Ethics",
-      "Logic",
-      "Philosophy of Mind",
-      "Metaphysics",
-      "Epistemology"
+      "RANK 100: History of College Rankings",
+      "RANK 110: The Methodology Behind It All",
+      "RANK 220: Ranking the College Rankings",
+      "RANK 260: What Goes Up Must Come Down",
+      "RANK 340: Gauging Legitimacy of Data Submissions",
+      "RANK 450: Choosing the Top, From T14 to T20"
     ]
   },
   {
-    "school": "School of Fine Arts",
+    "school": "Westcote School of the Arts",
     "type": "Major",
-    "name": "Graphic Design",
-    "image_link": "majors/default.png",
-    "description": "Graphic Design combines art and technology to create visual content for communication. Students develop skills in typography, layout, and digital media.",
-    "degree_type": "Bachelor of Fine Arts (B.F.A.)",
+    "name": "Roblox Architecture",
+    "image_link": "majors/default.png", // Change image
+    "description": "With the growth of the virtual world, Roblox Architecture combines art and technology to create visual content. Students develop skills in spatial design, material representation, and global media.",
+    "degree_type": "Bachelor of Architecture (B.Arch)",
     "program_highlights": [
       "Portfolio development with industry feedback",
       "Access to cutting-edge design software",
       "Collaborative projects with real-world clients",
       "Workshops with leading design professionals"
     ],
-    "career_opportunities": [
+    "career_opportunities": [ // Change these
       "Graphic Designer",
       "UX/UI Designer",
       "Art Director",
       "Motion Graphics Artist",
       "Brand Identity Designer"
     ],
-    "required_courses": [
-      "Introduction to Graphic Design",
-      "Typography",
-      "Color Theory",
-      "Digital Imaging",
-      "Web Design",
-      "Motion Graphics",
-      "Portfolio Development"
+    "required_courses": [ // Need more
+      "RBLX 102: What Makes a Block?",
+      "RBLX 149: Design to Redefine",
+      "RBLX 204: Virtual Physics",
+      "RBLX 343: Raising Robux",
+      "???",
+      "???",
+      "???"
     ]
   },
   {
