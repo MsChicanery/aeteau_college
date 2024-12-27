@@ -7,13 +7,13 @@ const faculty = [
 {
     name: "Dr. Carly T",
     title: "President",
-    description: "Carly T. is a professional skateboarder from the city of Dani located in California. She has a PHD in Discord Moderation and has studied Server Design at Cambridge. ",
+    description: "Carly T. is a professional skateboarder from the city of Dani located in California. She has a PhD in Discord Moderation and has studied Server Design at the University of Cambridge.",
     image: "faculty/carly.png"
   },
   {
     name: "R. Heatran",
     title: "Dean Of Undergraduate Research",
-    description: "Heatran only leaves Stark Mountain Chamber every five days to restock his mini-fridge with Kool-Aid and Caprisun. During his free time, he likes to go lava fishing with his buddy Groudon.",
+    description: "Heatran only leaves Stark Mountain Chamber every five days to restock his mini-fridge with Kool-Aid and Caprisun. In his free time, he likes to go lava fishing with his buddy Groudon.",
     image: "faculty/heatran.png"
   },
   {
@@ -24,7 +24,7 @@ const faculty = [
   },
   {
     name: "JP Kapth",
-    title: "Dean of Admissions",
+    title: "Director of Admissions",
     description: "JP is a professional yapper, acquiring her PhD in Pasadena. She likes to use comic sans on her powerpoints for meetings.",
     image: "faculty/jp.png"
   },
@@ -37,8 +37,20 @@ const faculty = [
   {
     name: "DirectXbox",
     title: "Dean of the Ponzi School of Scamming",
-    description: "DirectXbox, also knows as Charles P. Bianci, is a certified dumbass.",
+    description: "DirectXbox, also knows as Charles P. Bianci, is a certified scammer.",
     image: "faculty/directxbox.png"
+  },
+  {
+    name: "Ismay",
+    title: "Provost, Westcote School of the Arts",
+    description: "Ask Ismay for this", // Change bio
+    image: "faculty/directxbox.png" // Change image
+  },
+  {
+    name: "Biggreen10",
+    title: "Dean of Admissions",
+    description: "Ask him for this.", // Change bio
+    image: "faculty/directxbox.png" // Change image
   },
   
 ]
