@@ -1,50 +1,54 @@
 'use client';
 
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { GraduationCap, BookOpen, Users } from 'lucide-react';
 
-const generalEducation = {
+interface GeneralEducation {
+  image_link: string;
+  description: string;
+  core_competencies: string[];
+  humanities_social_sciences: string[];
+  required_courses: string[];
+}
+
+const generalEducation: GeneralEducation = {
   image_link: '/path-to-your-image.png', // Replace with your image link
-  description: 'These are the general education requirements that every student must complete to earn their degree. These courses are designed to provide a broad foundation of knowledge and skills.',
-  core_competencies: [
-    'Critical Thinking',
-    'Communication',
-    'Quantitative Literacy',
-  ],
-  humanities_social_sciences: [
-    'Introduction to Sociology',
-    'World History',
-    'Literature Analysis',
-  ],
-  required_courses: [
-    'Math 101: Algebra',
-    'Science 101: Basic Biology',
-    'English 101: Composition',
-  ]
+  description:
+    'These are the general education requirements that every student must complete to earn their degree. These courses are designed to provide a broad foundation of knowledge and skills.',
+  core_competencies: ['Critical Thinking', 'Communication', 'Quantitative Literacy'],
+  humanities_social_sciences: ['Introduction to Sociology', 'World History', 'Literature Analysis'],
+  required_courses: ['Math 101: Algebra', 'Science 101: Basic Biology', 'English 101: Composition'],
 };
 
 const isValidUrl = (url: string): boolean => {
   try {
     new URL(url);
     return true;
-  } catch (e) {
+  } catch {
     return false;
   }
 };
 
+interface SectionHeaderProps {
+  icon: React.FC<{ className?: string }>;
+  title: string;
+}
 
-const SectionHeader = ({ icon: Icon, title }) => (
+const SectionHeader: React.FC<SectionHeaderProps> = ({ icon: Icon, title }) => (
   <div className="flex items-center gap-2 mb-4">
     <Icon className="w-5 h-5 text-primary" />
     <h2 className="text-xl font-semibold">{title}</h2>
   </div>
 );
 
-const GeneralEducationPage = () => {
-  const imageUrl = isValidUrl(generalEducation.image_link) ? generalEducation.image_link : '/default-image.png';
+const GeneralEducationPage: React.FC = () => {
+  const imageUrl = isValidUrl(generalEducation.image_link)
+    ? generalEducation.image_link
+    : '/default-image.png';
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
@@ -64,7 +68,7 @@ const GeneralEducationPage = () => {
         </CardHeader>
         <CardContent>
           <p className="text-lg text-muted-foreground mb-8">{generalEducation.description}</p>
-          
+
           <div className="grid gap-8 md:grid-cols-2">
             <Card>
               <CardContent className="pt-6">
