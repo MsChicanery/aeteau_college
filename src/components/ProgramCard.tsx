@@ -4,7 +4,7 @@ import schools from "@/data/schools";
 import majors from "@/data/majors";
 import Image from "next/image";
 
-export default function CollegeMajorsShowcase() {
+export default function ProgramCard() {
   return (
     <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-8 text-center">College Schools and Majors Showcase</h1>
@@ -52,5 +52,5 @@ export default function CollegeMajorsShowcase() {
         </Card>
       ))}
     </div>
-  )
+  );
 }
