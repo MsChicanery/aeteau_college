@@ -37,7 +37,10 @@ const MajorDetailPage = () => {
     );
   }
 
-  const major = majors.find(m => m.name.toLowerCase() === majorName.toLowerCase());
+  // Decode the major name from the URL
+  const decodedMajorName = decodeURIComponent(majorName);
+
+  const major = majors.find(m => m.name.toLowerCase() === decodedMajorName.toLowerCase());
 
   if (!major) {
     return (
