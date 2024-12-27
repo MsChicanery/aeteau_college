@@ -50,7 +50,7 @@ const Home = () => {
               <p className="text-sm text-gray-600 mb-2">{major.school}</p>
               <p className="text-sm text-gray-500 mb-4">{major.type}</p>
               <Link legacyBehavior
-                href={`/majors/browse/${encodeURIComponent(major.name)}`}
+                href={`/programs/browse/${encodeURIComponent(major.name)}`}
               >
                 <a className="text-blue-600 hover:underline">Learn More</a>
               </Link>
