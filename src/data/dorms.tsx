@@ -23,7 +23,7 @@ const dorms = [
     amenities: [
       { name: "Wi-Fi", type: "Direct", description: "Directly connected to the admissions building! Average responce times between you and the admissions buildings are 3 milliseconds!" },
       { name: "Wake Up Alarm", type: "Doom", description: "Every 15 to 30 minutes at random, a large speaker yells \"DOOM\" at 175 decibles. This keeps you up all day so you can get the admissions decision you already have!" },
-      { name: "Caffine", type: "Unlimited", description: "Unlimited coffee avalible for you to stay up all day and night waiting for the admissions decision you already have!" },
+      { name: "Caffine", type: "Unlimited", description: "Unlimited coffee avalible for you to stay up all day and night so you get get your already accepted admissions decision the monment it comes out!" },
     ]
   },
   // Other dorms...
