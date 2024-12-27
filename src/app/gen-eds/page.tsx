@@ -4,49 +4,25 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
-import { GraduationCap, BookOpen, Users, Code, Flask, Language, Heart } from 'lucide-react';
+import { GraduationCap, BookOpen, Users } from 'lucide-react';
 
 const generalEducation = {
   image_link: '/path-to-your-image.png', // Replace with your image link
-  description: 'General Education Requirements provide a broad foundation of knowledge and skills essential for every student. They ensure a well-rounded education and prepare students for success in their chosen fields and beyond.',
+  description: 'These are the general education requirements that every student must complete to earn their degree. These courses are designed to provide a broad foundation of knowledge and skills.',
   core_competencies: [
     'Critical Thinking',
     'Communication',
     'Quantitative Literacy',
-    'Information Literacy',
   ],
   humanities_social_sciences: [
     'Introduction to Sociology',
     'World History',
     'Literature Analysis',
-    'Psychology',
-  ],
-  natural_sciences: [
-    'Biology 101',
-    'Chemistry 101',
-    'Physics 101',
-    'Environmental Science',
-  ],
-  arts_languages: [
-    'Art Appreciation',
-    'Music Theory',
-    'Introduction to Theater',
-    'Foreign Language',
-  ],
-  health_wellness: [
-    'Physical Education',
-    'Health and Wellness',
-    'Nutrition',
   ],
   required_courses: [
     'Math 101: Algebra',
     'Science 101: Basic Biology',
     'English 101: Composition',
-  ],
-  elective_courses: [
-    'Computer Science Basics',
-    'Creative Writing',
-    'Philosophy',
   ]
 };
 
@@ -88,7 +64,7 @@ const GeneralEducationPage = () => {
         <CardContent>
           <p className="text-lg text-muted-foreground mb-8">{generalEducation.description}</p>
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2">
             <Card>
               <CardContent className="pt-6">
                 <SectionHeader icon={GraduationCap} title="Core Competencies" />
@@ -120,54 +96,6 @@ const GeneralEducationPage = () => {
                 </ScrollArea>
               </CardContent>
             </Card>
-
-            <Card>
-              <CardContent className="pt-6">
-                <SectionHeader icon={Flask} title="Natural Sciences" />
-                <ScrollArea className="h-64">
-                  <ul className="space-y-3">
-                    {generalEducation.natural_sciences.map((course, index) => (
-                      <li key={index} className="flex gap-2">
-                        <span className="text-primary">•</span>
-                        <span>{course}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </ScrollArea>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="pt-6">
-                <SectionHeader icon={BookOpen} title="Arts and Languages" />
-                <ScrollArea className="h-64">
-                  <ul className="space-y-3">
-                    {generalEducation.arts_languages.map((course, index) => (
-                      <li key={index} className="flex gap-2">
-                        <span className="text-primary">•</span>
-                        <span>{course}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </ScrollArea>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="pt-6">
-                <SectionHeader icon={Heart} title="Health and Wellness" />
-                <ScrollArea className="h-64">
-                  <ul className="space-y-3">
-                    {generalEducation.health_wellness.map((course, index) => (
-                      <li key={index} className="flex gap-2">
-                        <span className="text-primary">•</span>
-                        <span>{course}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </ScrollArea>
-              </CardContent>
-            </Card>
           </div>
 
           <Separator className="my-8" />
@@ -177,23 +105,6 @@ const GeneralEducationPage = () => {
               <SectionHeader icon={BookOpen} title="Required Courses" />
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {generalEducation.required_courses.map((course, index) => (
-                  <Card key={index} className="bg-muted">
-                    <CardContent className="p-4">
-                      <p className="text-sm">{course}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Separator className="my-8" />
-
-          <Card>
-            <CardContent className="pt-6">
-              <SectionHeader icon={Code} title="Elective Courses" />
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {generalEducation.elective_courses.map((course, index) => (
                   <Card key={index} className="bg-muted">
                     <CardContent className="p-4">
                       <p className="text-sm">{course}</p>
