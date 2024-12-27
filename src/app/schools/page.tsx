@@ -1,8 +1,8 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import schools from "@/data/schools"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import schools from "@/data/schools";
 import majors from "@/data/majors";
-import Image from "next/image"
+import Image from "next/image";
 
 export default function CollegeMajorsShowcase() {
   return (
@@ -33,15 +33,6 @@ export default function CollegeMajorsShowcase() {
                       <Badge>{major.type}</Badge>
                     </CardHeader>
                     <CardContent>
-                      <div className="aspect-w-16 aspect-h-9 mb-4">
-                        <Image
-                          src={major.image_link}
-                          alt={major.name}
-                          layout="fill"
-                          objectFit="cover"
-                          className="rounded-md"
-                        />
-                      </div>
                       <p className="text-sm mb-2">{major.description}</p>
                       <p className="text-sm"><strong>Degree:</strong> {major.degree_type}</p>
                     </CardContent>
@@ -52,8 +43,5 @@ export default function CollegeMajorsShowcase() {
         </Card>
       ))}
     </div>
-  )
+  );
 }
-
-{ }
-
