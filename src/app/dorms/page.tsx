@@ -49,8 +49,8 @@ export default function CollegeDormsShowcase() {
         </Card>
       ))}
       <div className="text-center mt-8">
-        <Link href="/dorms/off-campus">
-          <a className="text-blue-600 hover:underline">Explore Off-Campus Dorms</a>
+        <Link href="/dorms/off-campus" className="text-blue-600 hover:underline">
+          Explore Off-Campus Dorms
         </Link>
       </div>
     </div>
