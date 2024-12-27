@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import dorms from "@/data/dorms"; // Assuming you have dorms data in this file
 import Image from "next/image";
+import Link from "next/link"; // Import Link from Next.js
 
 export default function CollegeDormsShowcase() {
   return (
@@ -47,6 +48,11 @@ export default function CollegeDormsShowcase() {
           </CardContent>
         </Card>
       ))}
+      <div className="text-center mt-8">
+        <Link href="/dorms/off-campus">
+          <a className="text-blue-600 hover:underline">Explore Off-Campus Dorms</a>
+        </Link>
+      </div>
     </div>
   );
 }
