@@ -13,7 +13,7 @@ const faculty = [
   {
     name: "Dr. Butter A. Osmanli",
     title: "Head of IT",
-    description: "Butter Osmanli is a troll from under the bridge. You can see him posting memes all over A2C in the worst ways possible.",
+    description: "Butter Osmanli is a discord femboy who loves snuggling with shark stuffed animals and drinking GamerSupps.",
     image: "faculty/butter.png"
   },
     {
