@@ -7,24 +7,24 @@ const faculty = [
 {
     name: "Dr. Carly T",
     title: "President",
-    description: "Carly T. is a professional skateboarder from the city of Dani located in California. She has a PhD in Discord Moderation and has studied Server Design at the University of Cambridge.",
+    description: "Carly T. is a cool person. She has a PhD in Discord Moderation and has studied Server Design at the University of Cambridge.",
     image: "faculty/carly.png"
   },
   {
-    name: "R. Heatran",
-    title: "Dean Of Undergraduate Research",
-    description: "Heatran only leaves Stark Mountain Chamber every five days to restock his mini-fridge with Kool-Aid and Caprisun. In his free time, he likes to go lava fishing with his buddy Groudon.",
-    image: "faculty/heatran.png"
-  },
-  {
     name: "Dr. Butter A. Osmanli",
-    title: "Dean of Osmanli School Of Law",
+    title: "Head of IT",
     description: "Butter Osmanli is a troll from under the bridge. You can see him posting memes all over A2C in the worst ways possible.",
     image: "faculty/butter.png"
   },
+    {
+    name: "Biggreen10",
+    title: "Dean of Admissions",
+    description: "Ask him for this.", // Change bio
+    image: "faculty/directxbox.png" // Change image
+  },
   {
     name: "JP Kapth",
-    title: "Director of Admissions",
+    title: "Assosciate Director of Admissions",
     description: "JP is a professional yapper, acquiring her PhD in Pasadena. She likes to use comic sans on her powerpoints for meetings.",
     image: "faculty/jp.png"
   },
@@ -47,10 +47,10 @@ const faculty = [
     image: "faculty/directxbox.png" // Change image
   },
   {
-    name: "Biggreen10",
-    title: "Dean of Admissions",
-    description: "Ask him for this.", // Change bio
-    image: "faculty/directxbox.png" // Change image
+    name: "R. Heatran",
+    title: "Dean Of Undergraduate Research",
+    description: "Heatran only leaves Stark Mountain Chamber every five days to restock his mini-fridge with Kool-Aid and Caprisun. In his free time, he likes to go lava fishing with his buddy Groudon.",
+    image: "faculty/heatran.png"
   },
   
 ]
