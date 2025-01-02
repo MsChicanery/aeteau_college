@@ -1,11 +1,25 @@
 import Link from "next/link";
+import meals from "@/data/meals";
 
 export default function DiningIndex() {
+  // Function to get a random item from an array
+  const getRandomItem = (items) => {
+    const index = new Date().getDate() % items.length;
+    return items[index];
+  };
+
+  // Generate today's menu
+  const todaysMenu = {
+    breakfast: getRandomItem(meals.breakfast),
+    lunch: getRandomItem(meals.lunch),
+    dinner: getRandomItem(meals.dinner),
+  };
+
   return (
     <div className="container mx-auto py-8">
       <h1 className="text-4xl font-extrabold mb-12 text-center text-blue-600">Dining Options</h1>
       <p className="text-lg mb-8 text-center text-gray-700">Explore the variety of dining options available on campus. From meal plans to restaurants and today’s menu, we have something for everyone. Check out special events and learn about the nutritional information of our meals.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <div className="p-6 border border-gray-200 rounded-lg shadow hover:shadow-md transition-shadow duration-300 bg-white">
           <Link href="/dining/restaurants" legacyBehavior>
             <a className="text-2xl font-semibold text-blue-700 hover:text-blue-900 mb-2">Restaurants</a>
@@ -41,6 +55,29 @@ export default function DiningIndex() {
             <a className="text-2xl font-semibold text-blue-700 hover:text-blue-900 mb-2">Contact Us</a>
           </Link>
           <p className="text-gray-700">Have questions or feedback? Get in touch with our dining services team for assistance and support.</p>
+        </div>
+      </div>
+      <div className="mt-12 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-blue-600">Today's Menu</h2>
+        <div className="space-y-4">
+          <div className="p-4 border border-gray-200 rounded-lg shadow bg-white">
+            <h3 className="text-2xl font-semibold mb-2 text-gray-800">Breakfast</h3>
+            <ul className="list-disc pl-5 text-gray-700">
+              <li>{todaysMenu.breakfast}</li>
+            </ul>
+          </div>
+          <div className="p-4 border border-gray-200 rounded-lg shadow bg-white">
+            <h3 className="text-2xl font-semibold mb-2 text-gray-800">Lunch</h3>
+            <ul className="list-disc pl-5 text-gray-700">
+              <li>{todaysMenu.lunch}</li>
+            </ul>
+          </div>
+          <div className="p-4 border border-gray-200 rounded-lg shadow bg-white">
+            <h3 className="text-2xl font-semibold mb-2 text-gray-800">Dinner</h3>
+            <ul className="list-disc pl-5 text-gray-700">
+              <li>{todaysMenu.dinner}</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="mt-12 text-center">
