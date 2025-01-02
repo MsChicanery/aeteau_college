@@ -2,18 +2,14 @@ import Link from "next/link";
 import meals from "@/data/meals";
 
 export default function DiningIndex() {
-  // Function to get a random item from an array
-  const getRandomItem = (items) => {
-    const index = new Date().getDate() % items.length;
-    return items[index];
+  // Function to get today's meals
+  const getTodaysMenu = () => {
+    const today = new Date();
+    const dayOfWeek = today.toLocaleString("en-US", { weekday: "long" });
+    return meals[dayOfWeek];
   };
 
-  // Generate today's menu
-  const todaysMenu = {
-    breakfast: getRandomItem(meals.breakfast),
-    lunch: getRandomItem(meals.lunch),
-    dinner: getRandomItem(meals.dinner),
-  };
+  const todaysMenu = getTodaysMenu();
 
   return (
     <div className="container mx-auto py-8">
@@ -40,51 +36,4 @@ export default function DiningIndex() {
         </div>
         <div className="p-6 border border-gray-200 rounded-lg shadow hover:shadow-md transition-shadow duration-300 bg-white">
           <Link href="/dining/specialEvents" legacyBehavior>
-            <a className="text-2xl font-semibold text-blue-700 hover:text-blue-900 mb-2">Special Events</a>
-          </Link>
-          <p className="text-gray-700">Stay updated on upcoming dining events and special occasions. Don’t miss out on themed dinners and culinary celebrations.</p>
-        </div>
-        <div className="p-6 border border-gray-200 rounded-lg shadow hover:shadow-md transition-shadow duration-300 bg-white">
-          <Link href="/dining/nutrition" legacyBehavior>
-            <a className="text-2xl font-semibold text-blue-700 hover:text-blue-900 mb-2">Nutrition Information</a>
-          </Link>
-          <p className="text-gray-700">Learn about the nutritional information of our meals. We provide detailed insights to help you make healthier choices.</p>
-        </div>
-        <div className="p-6 border border-gray-200 rounded-lg shadow hover:shadow-md transition-shadow duration-300 bg-white">
-          <Link href="/dining/contact" legacyBehavior>
-            <a className="text-2xl font-semibold text-blue-700 hover:text-blue-900 mb-2">Contact Us</a>
-          </Link>
-          <p className="text-gray-700">Have questions or feedback? Get in touch with our dining services team for assistance and support.</p>
-        </div>
-      </div>
-      <div className="mt-12 text-center">
-        <h2 className="text-3xl font-bold mb-4 text-blue-600">Today's Menu</h2>
-        <div className="space-y-4">
-          <div className="p-4 border border-gray-200 rounded-lg shadow bg-white">
-            <h3 className="text-2xl font-semibold mb-2 text-gray-800">Breakfast</h3>
-            <ul className="list-disc pl-5 text-gray-700">
-              <li>{todaysMenu.breakfast}</li>
-            </ul>
-          </div>
-          <div className="p-4 border border-gray-200 rounded-lg shadow bg-white">
-            <h3 className="text-2xl font-semibold mb-2 text-gray-800">Lunch</h3>
-            <ul className="list-disc pl-5 text-gray-700">
-              <li>{todaysMenu.lunch}</li>
-            </ul>
-          </div>
-          <div className="p-4 border border-gray-200 rounded-lg shadow bg-white">
-            <h3 className="text-2xl font-semibold mb-2 text-gray-800">Dinner</h3>
-            <ul className="list-disc pl-5 text-gray-700">
-              <li>{todaysMenu.dinner}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="mt-12 text-center">
-        <h2 className="text-3xl font-bold mb-4 text-blue-600">Why Choose Our Dining Options?</h2>
-        <p className="text-lg text-gray-700 mb-4">Our dining services are designed to provide delicious and nutritious meals for our students. With a variety of dining locations and meal plans, you'll always find something to enjoy. Our commitment to quality and sustainability ensures that you get the best dining experience on campus.</p>
-        <p className="text-lg text-gray-700 mb-4">Join us for special events, explore diverse cuisines, and stay informed about nutritional benefits. We’re here to make your dining experience enjoyable and satisfying.</p>
-      </div>
-    </div>
-  );
-}
+            <a className="text-2xl font-semibold text-blue-700 hover:text-blue-900 mb-2">Special Events
