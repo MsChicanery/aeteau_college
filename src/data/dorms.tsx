@@ -6,7 +6,7 @@ const dorms = [
     location: "Computer Science Building",
     capacity: 100,
     price: 750,
-    image: "/dorms/blahaj-hall.jpg",
+    image: "/dorms/blahaj.png",
     amenities: [
       { name: "Wi-Fi", type: "1GBPS", description: "Fast wifi avalible for students in the dorms - with a direct 1GBPS connection to our central hub!" },
       { name: "Common Area", type: "24/7", description: "A large study room filled with bean bags, charging outlets, and Blahaj toys to help you learn." },
@@ -19,7 +19,7 @@ const dorms = [
     location: "Admissions Building",
     capacity: 100,
     price: 750,
-    image: "/dorms/doom-towers.jpg",
+    image: "/dorms/doom.png",
     amenities: [
       { name: "Wi-Fi", type: "Direct", description: "Directly connected to the admissions building! Average responce times between you and the admissions buildings are 3 milliseconds!" },
       { name: "Wake Up Alarm", type: "Doom", description: "Every 15 to 30 minutes at random, a large speaker yells \"DOOM\" at 175 decibles. This keeps you up all day so you can get the admissions decision you already have!" },
