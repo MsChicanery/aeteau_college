@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import meals from "@/data/meals";
+import { meals } from "@/data/meals";
 
 interface Meal {
   meal: string;
