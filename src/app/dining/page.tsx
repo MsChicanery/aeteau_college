@@ -2,12 +2,20 @@ import React from "react";
 import Link from "next/link";
 import meals from "@/data/meals";
 
+interface Meal {
+  meal: string;
+  items: string[];
+}
+
+interface Meals {
+  [key: string]: Meal[];
+}
+
 export default function DiningIndex() {
-  // Function to get today's meals
   const getTodaysMenu = () => {
     const today = new Date();
     const dayOfWeek = today.toLocaleString("en-US", { weekday: "long" });
-    return meals[dayOfWeek];
+    return (meals as Meals)[dayOfWeek];
   };
 
   const todaysMenu = getTodaysMenu();
