@@ -64,9 +64,16 @@ export default function DiningIndex() {
         <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Today's Menu</h2>
         {todaysMenu ? (
           <ul className="list-disc pl-5">
-            {todaysMenu.map((item, index) => (
-              <li key={index} className="text-lg text-gray-700">
-                {item}
+            {todaysMenu.map((meal, index) => (
+              <li key={index} className="mb-4">
+                <div className="font-bold text-lg text-gray-700">{meal.meal}</div>
+                <ul className="list-disc pl-5">
+                  {meal.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-lg text-gray-700">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
