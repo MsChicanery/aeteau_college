@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 'use client'
-=======
 import React from "react";
 import Link from "next/link";
 import { meals } from "@/data/meals";
->>>>>>> b6740baa4ee8a33042ea69128202d23b021349d0
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
