@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import Head from 'next/head'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -19,6 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7525828152979976"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <body className={`${inter.className} bg-gray-50`}>
         <Navigation />
         <main className="min-h-screen pt-16">
@@ -30,4 +38,3 @@ export default function RootLayout({
     </html>
   )
 }
-
