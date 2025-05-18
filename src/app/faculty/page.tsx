@@ -11,9 +11,9 @@ const faculty = [
     image: "faculty/carly.png"
   },
   {
-    name: "Dr. Butter A. Osmanli",
+    name: "Dr. Kayla M. Chicanery",
     title: "Head of IT",
-    description: "Butter Osmanli is a discord femboy who loves snuggling with shark stuffed animals and drinking GamerSupps.",
+    description: "Kayla M. Chicanery is a total Weezer lover who also loves weezer. Did I mention she loves weezer? Also, she loves weezer.",
     image: "faculty/butter.png"
   },
     {
