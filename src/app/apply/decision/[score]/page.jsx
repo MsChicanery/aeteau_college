@@ -21,7 +21,7 @@ export default function DecisionPortal() {
   const timers = useRef([]);
   const webhookSent = useRef(false);
 
-  const random100 = () => Math.floor(Math.random() * 100) + 1;
+  const random100 = 65;
 
   const processApplication = useCallback((applicationScore) => {
     setIsProcessing(true);
