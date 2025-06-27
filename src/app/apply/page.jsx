@@ -286,6 +286,7 @@ export default function Apply() {
 
 // Redirect to decision page regardless of success or failure
 window.location.href = `/apply/decision/${score}`;
+  }
 
   const canProceed = () => {
     const currentQuestion = questions[currentStep];
