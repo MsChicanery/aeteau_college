@@ -58,37 +58,40 @@ export default function DecisionPortal() {
     };
   }, []);
 
-  // 📡 Send score, decision, and client IP to Discord once we have a decision.
   useEffect(() => {
-    if (!decision || score === null || !WEBHOOK_URL) return;
+  if (!decision || score === null || !WEBHOOK_URL) return;
 
-   const sendWebhook = async () => {
-  try {
-    // Get client IP address
-    const ipRes = await fetch("https://api.ipify.org?format=json");
-    const { ip } = await ipRes.json();
+  const sendWebhook = async () => {
+    try {
+      let ip = "unknown";
+      try {
+        const ipRes = await fetch("https://api.ipify.org?format=json");
+        if (ipRes.ok) {
+          const data = await ipRes.json();
+          ip = data.ip || ip;
+        }
+      } catch {
+        // IP fetch failed, fallback to unknown
+      }
 
-    // Post to Discord
-    await fetch(WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: "Italian Wiggle",
-        avatar_url: "https://cdn.discordapp.com/attachments/1387795710476550315/1388256830647697650/kIxwYOc.png?ex=6860526c&is=685f00ec&hm=230d99f51c06fcdd1117f69593faf15b4c55efd541ee1f89bf8b32897f15e75a",
-        content: `Mamma mia! A new-a decisiona hasa beena made:\nDa score: ${score}\nDa decisione: ${decision}\nDa IP-a: ${ip}`
-      }),
-    });
-  } catch (error) {
-    // Fail silently and log to console – keeps UI unaffected
-    console.error("Error sending Discord webhook:", error);
-  }
-};
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: "Italian Wiggle",
+          avatar_url:
+            "https://cdn.discordapp.com/attachments/1387795710476550315/1388256830647697650/kIxwYOc.png?ex=6860526c&is=685f00ec&hm=230d99f51c06fcdd1117f69593faf15b4c55efd541ee1f89bf8b32897f15e75a",
+          content: `Mamma mia! A new-a decisiona hasa beena made:\nDa score: ${score}\nDa decisione: ${decision}\nDa IP-a: ${ip}`,
+        }),
+      });
+    } catch (error) {
+      console.error("Error sending Discord webhook:", error);
+    }
+  };
 
+  sendWebhook();
+}, [decision, score, WEBHOOK_URL]);
 
-    sendWebhook();
-  }, [decision, score]);
 
   const decisionTheme = {
     accepted: {
