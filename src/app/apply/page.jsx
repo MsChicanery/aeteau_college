@@ -12,13 +12,15 @@ export default function Apply() {
     sat: '',
     activities: [],
     essay: '',
+    portalAstrology: '',
+    minecraftBuild: '',
+    socialEngineering: '',
+    ponziPitch: '',
+    dormPreference: '',
     creativity: '',
     quirkyAnswer: '',
     dreamJob: '',
     superpower: '',
-    pizzaTopping: '',
-    timeTravel: '',
-    zombieApocalypse: '',
     favoriteColor: '',
     coffeeTea: '',
     musicGenre: ''
@@ -49,7 +51,8 @@ export default function Apply() {
           options: [
             'Student Government', 'Sports Team', 'Drama Club', 'Debate Team', 
             'Volunteer Work', 'Part-time Job', 'Music/Band', 'Art Club',
-            'Science Olympiad', 'Chess Club', 'Robotics', 'Coding Club'
+            'Science Olympiad', 'Chess Club', 'Robotics', 'Coding Club',
+            'Astrological Society', 'Minecraft Build Team', 'Ponzi Scheme Simulation Club'
           ]
         }
       ]
@@ -67,6 +70,65 @@ export default function Apply() {
       ]
     },
     {
+      title: "Portal Astrology & Divination",
+      fields: [
+        { 
+          key: 'portalAstrology', 
+          label: 'If you could predict your admissions decision using any mystical method, which would you choose?', 
+          type: 'select',
+          options: [
+            'Portal Astrology', 'Email Astrology', 'Tea Leaves', 'Crystal Ball', 'Data Science', 'Other'
+          ]
+        }
+      ]
+    },
+    {
+      title: "Minecraft Architecture",
+      fields: [
+        { 
+          key: 'minecraftBuild', 
+          label: 'What would you build as your capstone project in Minecraft Architecture?', 
+          type: 'text', 
+          required: false
+        }
+      ]
+    },
+    {
+      title: "Social Engineering Scenario",
+      fields: [
+        { 
+          key: 'socialEngineering', 
+          label: 'Describe a creative (ethical) way you would influence a group to achieve a positive outcome.', 
+          type: 'textarea', 
+          required: false
+        }
+      ]
+    },
+    {
+      title: "Ponzi School of Scamming",
+      fields: [
+        { 
+          key: 'ponziPitch', 
+          label: 'Pitch a (fictional) product for the Modern-Day Income Generation major.', 
+          type: 'text', 
+          required: false
+        }
+      ]
+    },
+    {
+      title: "Campus Life & Dorms",
+      fields: [
+        { 
+          key: 'dormPreference', 
+          label: 'Which dorm amenity is most important to you?', 
+          type: 'select',
+          options: [
+            'Lava-resistant walls', 'Unlimited WiFi', '24/7 Café', 'Soundproof rooms', 'Secret passageways', 'Other'
+          ]
+        }
+      ]
+    },
+    {
       title: "Creativity Corner",
       fields: [
         { 
@@ -78,7 +140,7 @@ export default function Apply() {
       ]
     },
     {
-      title: "The Fun Stuff - Part 1",
+      title: "The Fun Stuff",
       fields: [
         { 
           key: 'dreamJob', 
@@ -86,7 +148,7 @@ export default function Apply() {
           type: 'select',
           options: [
             'Astronaut', 'Professional Athlete', 'Artist', 'Scientist', 'Teacher', 
-            'Entrepreneur', 'Doctor', 'Engineer', 'Writer', 'Chef', 'Other'
+            'Entrepreneur', 'Doctor', 'Engineer', 'Writer', 'Chef', 'Portal Astrologer', 'Ponzi Scheme CEO', 'Other'
           ]
         },
         { 
@@ -95,30 +157,7 @@ export default function Apply() {
           type: 'select',
           options: [
             'Flying', 'Invisibility', 'Time Travel', 'Mind Reading', 'Super Strength',
-            'Teleportation', 'Shape Shifting', 'Healing Powers', 'X-Ray Vision', 'Other'
-          ]
-        }
-      ]
-    },
-    {
-      title: "The Fun Stuff - Part 2",
-      fields: [
-        { 
-          key: 'pizzaTopping', 
-          label: 'Best pizza topping?', 
-          type: 'select',
-          options: [
-            'Pepperoni', 'Mushrooms', 'Pineapple', 'Sausage', 'Vegetables',
-            'Plain Cheese', 'Everything', 'Anchovies', 'BBQ Chicken', 'Other'
-          ]
-        },
-        { 
-          key: 'timeTravel', 
-          label: 'If you could time travel, where would you go?', 
-          type: 'select',
-          options: [
-            'Ancient Egypt', 'Medieval Times', 'Renaissance', 'Wild West',
-            '1960s', 'Future (2100)', 'Dinosaur Era', 'Ancient Greece', 'Other'
+            'Teleportation', 'Shape Shifting', 'Healing Powers', 'X-Ray Vision', 'Predicting College Decisions', 'Other'
           ]
         }
       ]
@@ -126,15 +165,6 @@ export default function Apply() {
     {
       title: "Almost Done!",
       fields: [
-        { 
-          key: 'zombieApocalypse', 
-          label: 'Zombie apocalypse survival strategy?', 
-          type: 'select',
-          options: [
-            'Hide in a bunker', 'Join a survivor group', 'Become zombie leader',
-            'Find a cure', 'Live on a boat', 'Mountain fortress', 'Other'
-          ]
-        },
         { 
           key: 'quirkyAnswer', 
           label: 'Tell us something completely random about yourself', 
@@ -150,7 +180,7 @@ export default function Apply() {
           key: 'favoriteColor', 
           label: 'Favorite Color', 
           type: 'select',
-          options: ['Red', 'Blue', 'Green', 'Purple', 'Orange', 'Yellow', 'Pink', 'Black', 'White', 'Other']
+          options: ['Red', 'Blue', 'Green', 'Purple', 'Orange', 'Yellow', 'Pink', 'Black', 'White', 'Aeteau Gold', 'Other']
         },
         { 
           key: 'coffeeTea', 
@@ -162,7 +192,7 @@ export default function Apply() {
           key: 'musicGenre', 
           label: 'Favorite Music Genre', 
           type: 'select',
-          options: ['Pop', 'Rock', 'Hip-Hop', 'Classical', 'Jazz', 'Country', 'Electronic', 'Folk', 'Other']
+          options: ['Pop', 'Rock', 'Hip-Hop', 'Classical', 'Jazz', 'Country', 'Electronic', 'Folk', 'Sea Shanties', 'Other']
         }
       ]
     }
@@ -201,40 +231,33 @@ export default function Apply() {
     const activityScore = Math.min(formData.activities.length * 2.5, 20);
     score += activityScore;
 
-    // Essay quality (15% of total)
+    // Essay quality (10% of total)
     const essayWords = formData.essay.split(' ').length;
-    const essayScore = Math.min((essayWords / 10) * 1.5, 15);
+    const essayScore = Math.min((essayWords / 10) * 1, 10);
     score += essayScore;
 
     // Creativity (10% of total)
     const creativityScore = Math.min(formData.creativity.length / 20, 10);
     score += creativityScore;
 
-    // Fun factor scoring (15% of total)
+    // Fun factor scoring (10% of total)
     let funScore = 0;
 
-    const creativeDreamJobs = ['Astronaut', 'Artist', 'Entrepreneur', 'Writer', 'Other'];
+    const creativeDreamJobs = ['Astronaut', 'Artist', 'Entrepreneur', 'Writer', 'Portal Astrologer', 'Ponzi Scheme CEO', 'Other'];
     if (creativeDreamJobs.includes(formData.dreamJob)) funScore += 2;
 
-    const originalSuperpowers = ['Time Travel', 'Shape Shifting', 'Healing Powers', 'Other'];
+    const originalSuperpowers = ['Time Travel', 'Shape Shifting', 'Healing Powers', 'Predicting College Decisions', 'Other'];
     if (originalSuperpowers.includes(formData.superpower)) funScore += 2;
 
-    if (formData.pizzaTopping === 'Pineapple') funScore += 3;
-    else if (formData.pizzaTopping === 'Anchovies') funScore += 2;
-    else if (formData.pizzaTopping === 'Other') funScore += 2;
-    else funScore += 1;
+    if (formData.dormPreference === 'Secret passageways') funScore += 2;
+    if (formData.portalAstrology === 'Portal Astrology') funScore += 2;
+    if (formData.minecraftBuild && formData.minecraftBuild.length > 10) funScore += 2;
+    if (formData.ponziPitch && formData.ponziPitch.length > 10) funScore += 2;
+    if (formData.socialEngineering && formData.socialEngineering.length > 10) funScore += 2;
 
-    const sophisticatedEras = ['Renaissance', 'Ancient Greece', 'Ancient Egypt'];
-    if (sophisticatedEras.includes(formData.timeTravel)) funScore += 2;
-    else funScore += 1;
+    funScore += Math.min(formData.quirkyAnswer.length / 30, 2);
 
-    const creativeStrategies = ['Become zombie leader', 'Find a cure', 'Mountain fortress'];
-    if (creativeStrategies.includes(formData.zombieApocalypse)) funScore += 2;
-    else funScore += 1;
-
-    funScore += Math.min(formData.quirkyAnswer.length / 30, 3);
-
-    score += Math.min(funScore, 15);
+    score += Math.min(funScore, 10);
 
     score = Math.max(1, Math.min(100, Math.round(score)));
 
@@ -257,30 +280,29 @@ export default function Apply() {
     }
 
     // Send data to Discord webhook
-  try {
-  await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'SAMPLE', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      username: "Italian Wiggle",
-      avatar_url: "https://cdn.discordapp.com/attachments/1387795710476550315/1388256830647697650/kIxwYOc.png?ex=6860526c&is=685f00ec&hm=230d99f51c06fcdd1117f69593faf15b4c55efd541ee1f89bf8b32897f15e75a",
-      content:
-        `**Italiana Wigglea Wanta Reporta A Newa Applicationa!**\n` +
-        `**Nome:** ${formData.name || 'N/A'}\n` +
-        `**E-mail-a:** ${formData.email || 'N/A'}\n` +
-        `**Indirizzo IP-a:** ${ip}\n` +
-        `**Punteggio-a:** ${score}`
-    })
-  });
-} catch (error) {
-  console.error('Error sending Discord webhook:', error);
-}
+    try {
+      await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'SAMPLE', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: "Italian Wiggle",
+          avatar_url: "https://cdn.discordapp.com/attachments/1387795710476550315/1388256830647697650/kIxwYOc.png?ex=6860526c&is=685f00ec&hm=230d99f51c06fcdd1117f69593faf15b4c55efd541ee1f89bf8b32897f15e75a",
+          content:
+            `**Italiana Wigglea Wanta Reporta A Newa Applicationa!**\n` +
+            `**Nome:** ${formData.name || 'N/A'}\n` +
+            `**E-mail-a:** ${formData.email || 'N/A'}\n` +
+            `**Indirizzo IP-a:** ${ip}\n` +
+            `**Punteggio-a:** ${score}`
+        })
+      });
+    } catch (error) {
+      console.error('Error sending Discord webhook:', error);
+    }
 
-
-// Redirect to decision page regardless of success or failure
-window.location.href = `/apply/decision/${score}`;
+    // Redirect to decision page regardless of success or failure
+    window.location.href = `/apply/decision/${score}`;
   }
 
   const canProceed = () => {
