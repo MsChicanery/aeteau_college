@@ -1,11 +1,7 @@
 'use client';
-
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Fish, Sparkles, Award, Clock, X } from "lucide-react";
-
-// 👇 Discord webhook URL – set NEXT_PUBLIC_DISCORD_WEBHOOK_URL in your env or replace the fallback.
-const WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || "https://discord.com/api/webhooks/1387795741933834391/el83j3I5l_Y_XPL8mZg1C7mM-M0VwRM9OsCgjGimvhO4tweokKU7_5ZXZsleyPMNr9e4";
 
 export default function DecisionPortal() {
   const params = useParams();
@@ -19,9 +15,8 @@ export default function DecisionPortal() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [showLetter, setShowLetter] = useState(false);
   const timers = useRef([]);
-  const webhookSent = useRef(false);
 
-  const random100 = 65;
+  const random100 = () => Math.floor(Math.random() * 100) + 1;
 
   const processApplication = useCallback((applicationScore) => {
     setIsProcessing(true);
@@ -45,7 +40,6 @@ export default function DecisionPortal() {
     );
   }, []);
 
-  // Handle incoming score param
   useEffect(() => {
     if (isValidScore) {
       setScore(numericScore);
@@ -53,55 +47,12 @@ export default function DecisionPortal() {
     }
   }, [isValidScore, numericScore, processApplication]);
 
-  // Cleanup timers on unmount
-  useEffect(() => () => timers.current.forEach((id) => window.clearTimeout(id)), []);
-
-  /**
-   * 🔔 Send score, decision, and IP to Discord once the decision is finalized.
-   */
   useEffect(() => {
-    if (!isProcessing && decision && score && !webhookSent.current) {
-      webhookSent.current = true; // prevent duplicate sends
-      (async () => {
-        // 1) Fetch client IP
-        let ip = "Unknown";
-        try {
-          const ipRes = await fetch("https://api.ipify.org?format=json");
-          if (ipRes.ok) {
-            const json = await ipRes.json();
-            ip = json.ip || "Unknown";
-          }
-        } catch (err) {
-          console.error("IP lookup failed:", err);
-        }
+    return () => {
+      timers.current.forEach((id) => window.clearTimeout(id));
+    };
+  }, []);
 
-        // 2) Send data to Discord webhook
-        try {
-          await fetch(WEBHOOK_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              embeds: [
-                {
-                  title: "Application Decision Logged",
-                  fields: [
-                    { name: "Score", value: String(score), inline: true },
-                    { name: "Decision", value: decision, inline: true },
-                    { name: "IP", value: ip, inline: true },
-                  ],
-                  timestamp: new Date().toISOString(),
-                },
-              ],
-            }),
-          });
-        } catch (err) {
-          console.error("Discord webhook failed:", err);
-        }
-      })();
-    }
-  }, [isProcessing, decision, score]);
-
-  // -------------- UI Logic unchanged below -------------- //
   const decisionTheme = {
     accepted: {
       gradient: "from-emerald-500 to-green-600",
@@ -120,11 +71,6 @@ export default function DecisionPortal() {
       icon: <Fish className="w-12 h-12" />,
     },
   };
-
-  /* ---------- DecisionLetter component and render tree below remain as in original code ---------- */
-  /* ... Keeping the rest of the DecisionPortal component unchanged for brevity ... */
-}
-
 
   function DecisionLetter() {
     if (!decision) return null;
