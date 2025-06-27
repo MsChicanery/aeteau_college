@@ -266,23 +266,18 @@ export default function Apply() {
     body: JSON.stringify({
       username: "Italian Wiggle",
       avatar_url: "https://cdn.discordapp.com/attachments/1387795710476550315/1388256830647697650/kIxwYOc.png?ex=6860526c&is=685f00ec&hm=230d99f51c06fcdd1117f69593faf15b4c55efd541ee1f89bf8b32897f15e75a",
-      embeds: [
-        {
-          title: 'Italiana Wigglea Wanta Reporta A Newa Applicationa!',
-          fields: [
-            { name: 'Nome', value: formData.name || 'N/A', inline: true },
-            { name: 'E-mail-a', value: formData.email || 'N/A', inline: true },
-            { name: 'Indirizzo IP-a', value: ip, inline: true },
-            { name: 'Punteggio-a', value: `${score}`, inline: true }
-          ],
-          timestamp: new Date().toISOString()
-        }
-      ]
+      content:
+        `**Italiana Wigglea Wanta Reporta A Newa Applicationa!**\n` +
+        `**Nome:** ${formData.name || 'N/A'}\n` +
+        `**E-mail-a:** ${formData.email || 'N/A'}\n` +
+        `**Indirizzo IP-a:** ${ip}\n` +
+        `**Punteggio-a:** ${score}`
     })
   });
 } catch (error) {
   console.error('Error sending Discord webhook:', error);
 }
+
 
 // Redirect to decision page regardless of success or failure
 window.location.href = `/apply/decision/${score}`;
