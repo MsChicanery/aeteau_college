@@ -104,7 +104,7 @@ export default function DecisionPortal() {
               </div>
             )}
             <p className="mb-4">You join a legacy of scholars who have shaped our world through innovation, creativity, and dedication. Our vibrant campus community awaits your unique contributions.</p>
-            <p className="mb-4">Enrollment confirmation is required within 30 days. Our team will contact you with detailed next steps.</p>
+            <p className="mb-4">Welcome to Aeteau College!</p>
           </>
         ),
       },
@@ -164,7 +164,7 @@ export default function DecisionPortal() {
                 {copy.body}
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <p className="mb-1">With warm regards,</p>
-                  <p className="font-semibold">Dr. Carly T</p>
+                  <p className="font-semibold">Dr. Chloe T</p>
                   <p className="text-sm text-gray-600">Director of Admissions</p>
                   <p className="text-sm text-gray-600">Aeteau College</p>
                 </div>
