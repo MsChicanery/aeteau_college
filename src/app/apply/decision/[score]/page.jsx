@@ -15,7 +15,7 @@ export default function DecisionPortal() {
   const [tuitionWaiver, setTuitionWaiver] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [showLetter, setShowLetter] = useState(false);
-  const timers = useRef<number[]>([]);
+  const timers = useRef([]);
 
   const random100 = () => Math.floor(Math.random() * 100) + 1;
 
