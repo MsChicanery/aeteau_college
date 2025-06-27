@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Fish, Sparkles, Award, Clock, X } from "lucide-react";
@@ -10,8 +9,8 @@ export default function DecisionPortal() {
   const numericScore = typeof scoreParam === "string" ? parseInt(scoreParam, 10) : Number(scoreParam);
   const isValidScore = Number.isFinite(numericScore) && numericScore >= 1 && numericScore <= 100;
 
-  const [score, setScore] = useState<number | null>(null);
-  const [decision, setDecision] = useState<"accepted" | "waitlisted" | "denied" | null>(null);
+  const [score, setScore] = useState(null);
+  const [decision, setDecision] = useState(null);
   const [tuitionWaiver, setTuitionWaiver] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [showLetter, setShowLetter] = useState(false);
@@ -19,12 +18,12 @@ export default function DecisionPortal() {
 
   const random100 = () => Math.floor(Math.random() * 100) + 1;
 
-  const processApplication = useCallback((applicationScore: number) => {
+  const processApplication = useCallback((applicationScore) => {
     setIsProcessing(true);
     timers.current.push(
       window.setTimeout(() => {
-        let finalDecision: typeof decision = null;
         let waiver = false;
+        let finalDecision = null;
 
         if (random100() <= applicationScore) {
           finalDecision = "accepted";
@@ -71,9 +70,9 @@ export default function DecisionPortal() {
       gradient: "from-gray-500 to-gray-600",
       icon: <Fish className="w-12 h-12" />,
     },
-  } as const;
+  };
 
-  const DecisionLetter: React.FC = () => {
+  function DecisionLetter() {
     if (!decision) return null;
 
     const today = new Date().toLocaleDateString("en-US", {
@@ -175,7 +174,7 @@ export default function DecisionPortal() {
         </div>
       </div>
     );
-  };
+  }
 
   if (!isValidScore) {
     return (
@@ -243,3 +242,4 @@ export default function DecisionPortal() {
     </div>
   );
 }
+// ...existing code...
