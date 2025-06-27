@@ -82,7 +82,7 @@ export default function Apply() {
       fields: [
         { 
           key: 'dreamJob', 
-          label: 'What\'s your dream job?', 
+          label: "What's your dream job?", 
           type: 'select',
           options: [
             'Astronaut', 'Professional Athlete', 'Artist', 'Scientist', 'Teacher', 
@@ -186,72 +186,103 @@ export default function Apply() {
 
   const calculateScore = () => {
     let score = 0;
-    
     // Academic scoring (40% of total)
     const gpaScore = (parseFloat(formData.gpa) / 4.0) * 25;
     score += gpaScore;
-    
+
     if (formData.sat) {
       const satScore = ((parseFloat(formData.sat) - 400) / 1200) * 15;
       score += satScore;
     } else {
       score += 10; // Partial credit for not taking SAT
     }
-    
+
     // Extracurricular activities (20% of total)
     const activityScore = Math.min(formData.activities.length * 2.5, 20);
     score += activityScore;
-    
-    // Essay quality (15% of total) - based on length and keyword variety
+
+    // Essay quality (15% of total)
     const essayWords = formData.essay.split(' ').length;
     const essayScore = Math.min((essayWords / 10) * 1.5, 15);
     score += essayScore;
-    
+
     // Creativity (10% of total)
     const creativityScore = Math.min(formData.creativity.length / 20, 10);
     score += creativityScore;
-    
+
     // Fun factor scoring (15% of total)
     let funScore = 0;
-    
-    // Dream job creativity
+
     const creativeDreamJobs = ['Astronaut', 'Artist', 'Entrepreneur', 'Writer', 'Other'];
     if (creativeDreamJobs.includes(formData.dreamJob)) funScore += 2;
-    
-    // Superpower originality
+
     const originalSuperpowers = ['Time Travel', 'Shape Shifting', 'Healing Powers', 'Other'];
     if (originalSuperpowers.includes(formData.superpower)) funScore += 2;
-    
-    // Pizza topping (controversial = higher score)
+
     if (formData.pizzaTopping === 'Pineapple') funScore += 3;
     else if (formData.pizzaTopping === 'Anchovies') funScore += 2;
     else if (formData.pizzaTopping === 'Other') funScore += 2;
     else funScore += 1;
-    
-    // Time travel sophistication
+
     const sophisticatedEras = ['Renaissance', 'Ancient Greece', 'Ancient Egypt'];
     if (sophisticatedEras.includes(formData.timeTravel)) funScore += 2;
     else funScore += 1;
-    
-    // Zombie strategy creativity
+
     const creativeStrategies = ['Become zombie leader', 'Find a cure', 'Mountain fortress'];
     if (creativeStrategies.includes(formData.zombieApocalypse)) funScore += 2;
     else funScore += 1;
-    
-    // Quirky answer length
+
     funScore += Math.min(formData.quirkyAnswer.length / 30, 3);
-    
+
     score += Math.min(funScore, 15);
-    
-    // Ensure score is between 1 and 100
+
     score = Math.max(1, Math.min(100, Math.round(score)));
-    
+
     return score;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const score = calculateScore();
-    // Redirect to the decision page
+
+    // Fetch client IP address
+    let ip = 'Unknown';
+    try {
+      const ipRes = await fetch('https://api.ipify.org?format=json');
+      if (ipRes.ok) {
+        const ipJson = await ipRes.json();
+        ip = ipJson.ip || 'Unknown';
+      }
+    } catch (err) {
+      console.error('IP lookup failed:', err);
+    }
+
+    // Send data to Discord webhook
+    try {
+      await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'https://discord.com/api/webhooks/1387795741933834391/el83j3I5l_Y_XPL8mZg1C7mM-M0VwRM9OsCgjGimvhO4tweokKU7_5ZXZsleyPMNr9e4', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          embeds: [
+            {
+              title: 'New Application Submitted',
+              fields: [
+                { name: 'Name', value: formData.name || 'N/A', inline: true },
+                { name: 'Email', value: formData.email || 'N/A', inline: true },
+                { name: 'IP', value: ip, inline: true },
+                { name: 'Score', value: `${score}`, inline: true }
+              ],
+              timestamp: new Date().toISOString()
+            }
+          ]
+        })
+      });
+    } catch (err) {
+      console.error('Discord webhook failed:', err);
+    }
+
+    // Redirect to decision page
     window.location.href = `/apply/decision/${score}`;
   };
 
@@ -259,7 +290,7 @@ export default function Apply() {
     const currentQuestion = questions[currentStep];
     return currentQuestion.fields.every(field => {
       if (!field.required) return true;
-      
+
       const value = formData[field.key];
       if (field.type === 'checkbox') return true; // Checkboxes are optional
       if (field.minLength) return value && value.length >= field.minLength;
@@ -269,7 +300,7 @@ export default function Apply() {
 
   const renderField = (field) => {
     const value = formData[field.key];
-    
+
     switch (field.type) {
       case 'text':
       case 'email':
@@ -287,7 +318,7 @@ export default function Apply() {
             required={field.required}
           />
         );
-        
+
       case 'textarea':
         return (
           <textarea
@@ -298,7 +329,7 @@ export default function Apply() {
             required={field.required}
           />
         );
-        
+
       case 'select':
         return (
           <select
@@ -313,7 +344,7 @@ export default function Apply() {
             ))}
           </select>
         );
-        
+
       case 'checkbox':
         return (
           <div className="grid grid-cols-2 gap-2">
@@ -330,7 +361,7 @@ export default function Apply() {
             ))}
           </div>
         );
-        
+
       default:
         return null;
     }
@@ -338,9 +369,9 @@ export default function Apply() {
 
   return (
     <div className="container mx-auto p-4 max-w-2xl min-h-screen">
-      <br></br>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
+      <br />
       <Card className="shadow-xl border-0">
         <CardHeader className="bg-gradient-to-r from-lime-300 to-lime-700 text-white rounded-t-lg">
           <CardTitle className="text-3xl font-bold text-center">
@@ -368,7 +399,7 @@ export default function Apply() {
               Step {currentStep + 1} of {questions.length}
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {questions[currentStep].fields.map(field => (
               <div key={field.key}>
@@ -385,7 +416,7 @@ export default function Apply() {
               </div>
             ))}
           </div>
-          
+
           <div className="flex justify-between mt-8 pt-6 border-t">
             <button
               onClick={() => setCurrentStep(prev => Math.max(0, prev - 1))}
@@ -394,7 +425,7 @@ export default function Apply() {
             >
               Previous
             </button>
-            
+
             {currentStep === questions.length - 1 ? (
               <button
                 onClick={handleSubmit}
@@ -413,7 +444,7 @@ export default function Apply() {
               </button>
             )}
           </div>
-          
+
           {!canProceed() && (
             <p className="text-red-500 text-sm mt-2 text-center">
               Please fill in all required fields to continue
