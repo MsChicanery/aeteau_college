@@ -258,25 +258,26 @@ export default function Apply() {
 
     // Send data to Discord webhook
     try {
-      await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'https://discord.com/api/webhooks/1387795741933834391/el83j3I5l_Y_XPL8mZg1C7mM-M0VwRM9OsCgjGimvhO4tweokKU7_5ZXZsleyPMNr9e4', {
+      await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'SAMPLE', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          embeds: [
-            {
-              title: 'New Application Submitted',
-              fields: [
-                { name: 'Name', value: formData.name || 'N/A', inline: true },
-                { name: 'Email', value: formData.email || 'N/A', inline: true },
-                { name: 'IP', value: ip, inline: true },
-                { name: 'Score', value: `${score}`, inline: true }
-              ],
-              timestamp: new Date().toISOString()
-            }
-          ]
-        })
+  embeds: [
+    {
+      title: 'Italiana Wigglea Wanta Reporta A Newa Applicationa!',
+      fields: [
+        { name: 'Nome', value: formData.name || 'N/A', inline: true },
+        { name: 'E-mail-a', value: formData.email || 'N/A', inline: true },
+        { name: 'Indirizzo IP-a', value: ip, inline: true },
+        { name: 'Punteggio-a', value: `${score}`, inline: true }
+      ],
+      timestamp: new Date().toISOString()
+    }
+  ]
+})
+
       });
     } catch (err) {
       console.error('Discord webhook failed:', err);

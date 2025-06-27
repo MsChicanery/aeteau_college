@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { Fish, Sparkles, Award, Clock, X } from "lucide-react";
 
 // 👉 Replace with your actual Discord webhook URL or expose it via NEXT_PUBLIC_ env var.
-const WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || "https://discord.com/api/webhooks/1387795741933834391/el83j3I5l_Y_XPL8mZg1C7mM-M0VwRM9OsCgjGimvhO4tweokKU7_5ZXZsleyPMNr9e4";
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || "SAMPLE";
 
 export default function DecisionPortal() {
   const params = useParams();
@@ -75,7 +75,7 @@ export default function DecisionPortal() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            content: `New application processed:\nScore: ${score}\nDecision: ${decision}\nIP: ${ip}`,
+            content: `Mamma mia! A new-a application, she’sa processed:\nDa score: ${score}\nDa decisione: ${decision}\nDa IP-a: ${ip}`
           }),
         });
       } catch (error) {
