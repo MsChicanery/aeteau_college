@@ -63,26 +63,29 @@ export default function DecisionPortal() {
     if (!decision || score === null || !WEBHOOK_URL) return;
 
     const sendWebhook = async () => {
-      try {
-        // Get client IP address
-        const ipRes = await fetch("https://api.ipify.org?format=json");
-        const { ip } = await ipRes.json();
+  try {
+    // Get client IP address
+    const ipRes = await fetch("https://api.ipify.org?format=json");
+    const { ip } = await ipRes.json();
 
-        // Post to Discord
-        await fetch(WEBHOOK_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            content: `Mamma mia! A new-a application, she’sa processed:\nDa score: ${score}\nDa decisione: ${decision}\nDa IP-a: ${ip}`
-          }),
-        });
-      } catch (error) {
-        // Fail silently and log to console – keeps UI unaffected
-        console.error("Error sending Discord webhook:", error);
-      }
-    };
+    // Post to Discord
+    await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: "Italian Wiggle",
+        avatar_url: "https://cdn.discordapp.com/attachments/1387795710476550315/1388256830647697650/kIxwYOc.png?ex=6860526c&is=685f00ec&hm=230d99f51c06fcdd1117f69593faf15b4c55efd541ee1f89bf8b32897f15e75a",
+        content: `Mamma mia! A new-a application, she’sa processed:\nDa score: ${score}\nDa decisione: ${decision}\nDa IP-a: ${ip}`
+      }),
+    });
+  } catch (error) {
+    // Fail silently and log to console – keeps UI unaffected
+    console.error("Error sending Discord webhook:", error);
+  }
+};
+
 
     sendWebhook();
   }, [decision, score]);

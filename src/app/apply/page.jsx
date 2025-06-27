@@ -258,25 +258,32 @@ export default function Apply() {
 
     // Send data to Discord webhook
     try {
-      await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'SAMPLE', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-  embeds: [
-    {
-      title: 'Italiana Wigglea Wanta Reporta A Newa Applicationa!',
-      fields: [
-        { name: 'Nome', value: formData.name || 'N/A', inline: true },
-        { name: 'E-mail-a', value: formData.email || 'N/A', inline: true },
-        { name: 'Indirizzo IP-a', value: ip, inline: true },
-        { name: 'Punteggio-a', value: `${score}`, inline: true }
-      ],
-      timestamp: new Date().toISOString()
-    }
-  ]
-})
+  await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'SAMPLE', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      username: "Italian Wiggle",
+      avatar_url: "https://cdn.discordapp.com/attachments/1387795710476550315/1388256830647697650/kIxwYOc.png?ex=6860526c&is=685f00ec&hm=230d99f51c06fcdd1117f69593faf15b4c55efd541ee1f89bf8b32897f15e75a",
+      embeds: [
+        {
+          title: 'Italiana Wigglea Wanta Reporta A Newa Applicationa!',
+          fields: [
+            { name: 'Nome', value: formData.name || 'N/A', inline: true },
+            { name: 'E-mail-a', value: formData.email || 'N/A', inline: true },
+            { name: 'Indirizzo IP-a', value: ip, inline: true },
+            { name: 'Punteggio-a', value: `${score}`, inline: true }
+          ],
+          timestamp: new Date().toISOString()
+        }
+      ]
+    })
+  });
+} catch (error) {
+  console.error('Error sending Discord webhook:', error);
+}
+
 
       });
     } catch (err) {
