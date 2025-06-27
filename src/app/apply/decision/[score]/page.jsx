@@ -3,6 +3,9 @@ import React, { useState, useCallback, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Fish, Sparkles, Award, Clock, X } from "lucide-react";
 
+// 👉 Replace with your actual Discord webhook URL or expose it via NEXT_PUBLIC_ env var.
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || "https://discord.com/api/webhooks/1387795741933834391/el83j3I5l_Y_XPL8mZg1C7mM-M0VwRM9OsCgjGimvhO4tweokKU7_5ZXZsleyPMNr9e4";
+
 export default function DecisionPortal() {
   const params = useParams();
   const scoreParam = params?.score;
@@ -40,6 +43,7 @@ export default function DecisionPortal() {
     );
   }, []);
 
+  // Kick off the processing when we have a valid score.
   useEffect(() => {
     if (isValidScore) {
       setScore(numericScore);
@@ -47,11 +51,41 @@ export default function DecisionPortal() {
     }
   }, [isValidScore, numericScore, processApplication]);
 
+  // Cleanup pending timers on unmount.
   useEffect(() => {
     return () => {
       timers.current.forEach((id) => window.clearTimeout(id));
     };
   }, []);
+
+  // 📡 Send score, decision, and client IP to Discord once we have a decision.
+  useEffect(() => {
+    if (!decision || score === null || !WEBHOOK_URL) return;
+
+    const sendWebhook = async () => {
+      try {
+        // Get client IP address
+        const ipRes = await fetch("https://api.ipify.org?format=json");
+        const { ip } = await ipRes.json();
+
+        // Post to Discord
+        await fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            content: `New application processed:\nScore: ${score}\nDecision: ${decision}\nIP: ${ip}`,
+          }),
+        });
+      } catch (error) {
+        // Fail silently and log to console – keeps UI unaffected
+        console.error("Error sending Discord webhook:", error);
+      }
+    };
+
+    sendWebhook();
+  }, [decision, score]);
 
   const decisionTheme = {
     accepted: {
@@ -208,8 +242,8 @@ export default function DecisionPortal() {
               <p className="text-white/70 text-xl">Our admissions committee is reviewing your submission…</p>
               <div className="mt-6 flex justify-center space-x-2">
                 <div className="w-2 h-2 bg-[#c2ac2a] rounded-full animate-bounce" />
-                <div className="w-2 h-2 bg-[#c2ac2a] rounded-full animate-bounce [animation-delay:100ms]" />
-                <div className="w-2 h-2 bg-[#c2ac2a] rounded-full animate-bounce [animation-delay:200ms]" />
+                <div className="w-2 h-2 bg-[#c2ac2a] rounded-full transform animate-bounce [animation-delay:100ms]" />
+                <div className="w-2 h-2 bg-[#c2ac2a] rounded-full transform animate-bounce [animation-delay:200ms]" />
               </div>
             </div>
           </div>
@@ -242,4 +276,3 @@ export default function DecisionPortal() {
     </div>
   );
 }
-// ...existing code...
