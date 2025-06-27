@@ -257,7 +257,7 @@ export default function Apply() {
     }
 
     // Send data to Discord webhook
-    try {
+  try {
   await fetch(process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'SAMPLE', {
     method: 'POST',
     headers: {
@@ -284,15 +284,8 @@ export default function Apply() {
   console.error('Error sending Discord webhook:', error);
 }
 
-
-      });
-    } catch (err) {
-      console.error('Discord webhook failed:', err);
-    }
-
-    // Redirect to decision page
-    window.location.href = `/apply/decision/${score}`;
-  };
+// Redirect to decision page regardless of success or failure
+window.location.href = `/apply/decision/${score}`;
 
   const canProceed = () => {
     const currentQuestion = questions[currentStep];
