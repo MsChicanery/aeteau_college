@@ -19,7 +19,7 @@ export default function DecisionPortal() {
   const [showLetter, setShowLetter] = useState(false);
   const timers = useRef([]);
 
-  const random100 = () => Math.floor(Math.random() * 100) + 1;
+  const random100 = () => 80;
 
   const processApplication = useCallback((applicationScore) => {
     setIsProcessing(true);
