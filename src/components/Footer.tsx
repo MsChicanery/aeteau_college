@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
             <Link href="/" className="flex items-center space-x-3 mb-4">
-              <FishIcon size={36} className="text-white drop-shadow" />
+              <img src="/logo.png" alt="Site Logo" className="sm:w-6 md:w-8" style={{ width: 28 }}/>
               <span className="text-2xl font-extrabold tracking-wide">Aeteau College</span>
             </Link>
             <p className="italic text-white/80">"nos nescio quomodo latine loqui"</p>
@@ -40,10 +40,6 @@ export default function Footer() {
             <p>
               <span className="font-semibold">Email:</span>{' '}
               <a href="mailto:info@aeteau.edu" className="hover:underline">info@aeteau.edu</a>
-            </p>
-            <p>
-              <span className="font-semibold">Phone:</span>{' '}
-              <a href="tel:5551234567" className="hover:underline">(555) 123-4567</a>
             </p>
             <p>
               <span className="font-semibold">Hours:</span>{' '}

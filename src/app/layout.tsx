@@ -10,37 +10,37 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Aeteau University',
-    template: '%s | Aeteau University',
+    default: 'Aeteau College',
+    template: '%s | Aeteau College',
   },
   description:
-    'Aeteau University — empowering the next generation of innovators through rigorous academics, vibrant campus life, and a global alumni network.',
-  metadataBase: new URL('https://aeteau.edu'),
+    'Aeteau College — empowering the next generation of innovators through rigorous academics, vibrant campus life, and a global alumni network.',
+  metadataBase: new URL('https://aeteau.college'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Aeteau University',
+    title: 'Aeteau College',
     description:
-      'Discover your future at Aeteau University. Admissions open for Fall 2025.',
-    url: 'https://aeteau.edu',
-    siteName: 'Aeteau University',
+      'Discover your future at Aeteau College. Admissions open for Fall 2025.',
+    url: 'https://aeteau.college',
+    siteName: 'Aeteau College',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/og/og-image.jpg',
+        url: '/banner.png',
         width: 1200,
         height: 630,
-        alt: 'Aeteau University campus',
+        alt: 'Aeteau College campus',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aeteau University',
+    title: 'Aeteau College',
     description:
-      'Discover your future at Aeteau University. Admissions open for Fall 2025.',
+      'Discover your future at Aeteau College. Admissions open for Fall 2025.',
     images: ['/banner.png'],
   },
   icons: {

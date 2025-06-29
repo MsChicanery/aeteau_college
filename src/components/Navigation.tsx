@@ -68,7 +68,8 @@ export default function Navigation() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <Link href="/" className="flex items-center space-x-2 hover:scale-110 transition-transform duration-300">
-            <FishIcon size={28} className="text-[#a2ca2c] sm:size-6 md:size-8" />
+            <img src="/logo.png" alt="Site Logo" className="sm:w-6 md:w-8" style={{ width: 28 }}/>
+
             <span className="text-2xl font-extrabold tracking-tighter text-pink-600">Aeteau College</span>
           </Link>
 

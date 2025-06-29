@@ -94,19 +94,19 @@ export default function DecisionPortal() {
   const decisionTheme = {
     accepted: {
       gradient: "from-emerald-500 to-green-600",
-      icon: <Award className="w-12 h-12" />,
+      icon: "/logo.png"
     },
     waitlisted: {
       gradient: "from-amber-500 to-yellow-600",
-      icon: <Clock className="w-12 h-12" />,
+      icon: "/logo.png"
     },
     denied: {
       gradient: "from-red-500 to-rose-600",
-      icon: <X className="w-12 h-12" />,
+      icon: "/logo.png"
     },
     default: {
       gradient: "from-gray-500 to-gray-600",
-      icon: <Fish className="w-12 h-12" />,
+      icon: "/logo.png"
     },
   };
 
@@ -176,7 +176,9 @@ export default function DecisionPortal() {
           <div className={common.header}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
-                <div className="bg-white/20 p-3 rounded-full">{decisionTheme[decision].icon}</div>
+                <div className="bg-white/20 p-3 rounded-full">
+                  <img src={decisionTheme[decision].icon} alt="Decision icon" className="w-8 h-8" />
+                </div>
                 <div>
                   <h2 className="text-2xl font-bold">{copy.title}</h2>
                   <p className="text-white/90">{copy.subtitle}</p>
@@ -191,7 +193,7 @@ export default function DecisionPortal() {
             <div className="text-right text-gray-500 mb-6 text-sm">{today}</div>
             <div className="mb-6">
               <div className="flex items-center space-x-3 mb-6">
-                <Fish className="w-8 h-8 text-[#c2ac2a]" />
+                <img src="/logo.png" alt="Site Logo" className="sm:w-6 md:w-8" style={{ width: 28 }}/>
                 <div>
                   <h3 className="text-xl font-bold text-[#8e7b1a]">Aeteau College</h3>
                   <p className="text-gray-600 text-sm">Office of Admissions</p>
@@ -203,7 +205,7 @@ export default function DecisionPortal() {
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <p className="mb-1">With warm regards,</p>
                   <p className="font-semibold">Dr. Chloe T</p>
-                  <p className="text-sm text-gray-600">Director of Admissions</p>
+                  <p className="text-sm text-gray-600">President</p>
                   <p className="text-sm text-gray-600">Aeteau College</p>
                 </div>
               </div>
@@ -257,7 +259,7 @@ export default function DecisionPortal() {
           <div className="text-center">
             <div className={`bg-gradient-to-r ${theme.gradient} rounded-2xl p-12 shadow-2xl transform hover:scale-105 transition duration-300`}>
               <div className="bg-white/20 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
-                {theme.icon}
+                <img src="/logo.png" alt="Decision icon" className="w-12 h-12" />
               </div>
               <h3 className="text-4xl font-bold text-white mb-4 capitalize">{decision === "accepted" ? "ACCEPTED!" : decision === "waitlisted" ? "WAITLISTED" : "DECISION MADE"}</h3>
               {tuitionWaiver && (

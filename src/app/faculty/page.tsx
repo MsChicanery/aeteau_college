@@ -7,7 +7,7 @@ const faculty = [
 {
     name: "Dr. Carly T",
     title: "President",
-    description: "Carly T. is a cool person. She has a PhD in Discord Moderation and has studied Server Design at the University of Cambridge.",
+    description: "Carly T. is a cool person. She has a PhD in Discord Moderation from UC Davis, a Bachelors of Arts in Online Discussions, and has studied Server Design at the University of Cambridge.",
     image: "faculty/carly.png"
   },
   {
