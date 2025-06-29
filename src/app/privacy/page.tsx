@@ -1,87 +1,258 @@
-import React from "react";
+import React from 'react';
 
-export default function PrivacyPage() {
+const PrivacyPolicy = () => {
   return (
-    <>
-      <style>
-        {`
-        [data-custom-class='body'], [data-custom-class='body'] * {
-          background: transparent !important;
-        }
-        [data-custom-class='title'], [data-custom-class='title'] * {
-          font-family: Arial !important;
-          font-size: 26px !important;
-          color: #000000 !important;
-        }
-        [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
-          font-family: Arial !important;
-          color: #595959 !important;
-          font-size: 14px !important;
-        }
-        [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
-          font-family: Arial !important;
-          font-size: 19px !important;
-          color: #000000 !important;
-        }
-        [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
-          font-family: Arial !important;
-          font-size: 17px !important;
-          color: #000000 !important;
-        }
-        [data-custom-class='body_text'], [data-custom-class='body_text'] * {
-          color: #595959 !important;
-          font-size: 14px !important;
-          font-family: Arial !important;
-        }
-        [data-custom-class='link'], [data-custom-class='link'] * {
-          color: #3030F1 !important;
-          font-size: 14px !important;
-          font-family: Arial !important;
-          word-break: break-word !important;
-        }
-        ul {
-          list-style-type: square;
-        }
-        ul > li > ul {
-          list-style-type: circle;
-        }
-        ul > li > ul > li > ul {
-          list-style-type: square;
-        }
-        ol li {
-          font-family: Arial ;
-        }
-        `}
-      </style>
-      <span
-        style={{
-          display: "block",
-          margin: "0 auto 3.125rem",
-          width: "11.125rem",
-          height: "2.375rem",
-          background:
-            "url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzgiIGhlaWdodD0iMzgiIHZpZXdCb3g9IjAgMCAxNzggMzgiPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cGF0aCBmaWxsPSIjRDFEMUQxIiBkPSJNNC4yODMgMjQuMTA3Yy0uNzA1IDAtMS4yNTgtLjI1Ni0xLjY2LS43NjhoLS4wODVjLjA1Ny41MDIuMDg2Ljc5Mi4wODYuODd2Mi40MzRILjk4NXYtOC42NDhoMS4zMzJsLjIzMS43NzloLjA3NmMuMzgzLS41OTQuOTUtLjg5MiAxLjcwMi0uODkyLjcxIDAgMS4yNjQuMjc0IDEuNjY1LjgyMi40MDEuNTQ4LjYwMiAxLjMwOS42MDIgMi4yODMgMCAuNjQtLjA5NCAxLjE5OC0uMjgyIDEuNjctLjE4OC40NzMtLjQ1Ni44MzMtLjgwMyAxLjA4LS4zNDcuMjQ3LS43NTYuMzctMS4yMjUuMzd6TTMuOCAxOS4xOTNjLS40MDUgMC0uNy4xMjQtLjg4Ni4zNzMtLjE4Ny4yNDktLjI4My42Ni0uMjkgMS4yMzN2LjE3N2MwIC42NDUuMDk1IDEuMTA3LjI4NyAxLjM4Ni4xOTIuMjguNDk1LjQxOS45MS40MTkuNzM0IDAgMS4xMDEtLjYwNSAxLjEwMS0xLjgxNiAwLS41OS0uMDktMS4wMzQtLjI3LTEuMzI5LS4xODItLjI5NS0uNDY1LS40NDMtLjg1Mi0uNDQzem01LjU3IDEuNzk0YzAgLjU5NC4wOTggMS4wNDQuMjkzIDEuMzQ4LjE5Ni4zMDQuNTEzLjQ1Ny45NTQuNDU3LjQzNyAwIC43NS0uMTUyLjk0Mi0uNDU0LjE5Mi0uMzAzLjI4OC0uNzUzLjI4OC0xLjM1MSAwLS41OTUtLjA5Ny0xLjA0LS4yOS0xLjMzOC0uMTk0LS4yOTctLjUxLS40NDUtLjk1LS40NDUtLjQzOCAwLS43NTMuMTQ3LS45NDYuNDQzLS4xOTQuMjk1LS4yOS43NDItLjI5IDEuMzR6bTQuMTUzIDBjMCAuOTc3LS4yNTggMS43NDItLjc3NCAyLjI5My0uNTE1LjU1Mi0xLjIzMy44MjctMi4xNTQuODI3LS41NzYgMC0xLjA4NS0uMTI2LTEuNTI1LS4zNzhhMi41MiAyLjUyIDAgMCAxLTEuMDE1LTEuMDg4Yy0uMjM3LS40NzMtLjM1NS0xLjAyNC0uMzU1LTEuNjU0IDAtLjk4MS4yNTYtMS43NDQuNzY4LTIuMjg4LjUxMi0uNTQ1IDEuMjMyLS44MTcgMi4xNi0uODE3LjU3NiAwIDEuMDg1LjEyNiAxLjUyNS4zNzYuNDQuMjUxLjc3OS42MSAxLjAxNSAxLjA4LjIzNi40NjkuMzU1IDEuMDE5LjM1NSAxLjY0OXpNMTkuNzEgMjRsLS40NjItMi4xLS42MjMtMi42NTNoLS4wMzdMMTcuNDkzIDI0SDE1LjczbC0xLjcwOC02LjAwNWgxLjYzM2wuNjkzIDIuNjU5Yy4xMS40NzYuMjI0IDEuMTMzLjMzOCAxLjk3MWguMDMyYy4wMTUtLjI3Mi4wNzctLjcwNC4xODgtMS4yOTRsLjA4Ni0uNDU3Ljc0Mi0yLjg3OWgxLjgwNGwuNzA0IDIuODc5Yy4wMTQuMDc5LjAzNy4xOTUuMDY3LjM1YTIwLjk5OCAyMC45OTggMCAwIDEgLjE2NyAxLjAwMmMuMDIzLjE2NS4wMzYuMjk5LjA0LjM5OWguMDMyYy4wMzItLjI1OC4wOS0uNjExLjE3Mi0xLjA2LjA4Mi0uNDUuMTQxLS43NTQuMTc3LS45MTFsLjcyLTIuNjU5aDEuNjA2TDIxLjQ5NCAyNGgtMS43ODN6bTcuMDg2LTQuOTUyYy0uMzQ4IDAtLjYyLjExLS44MTcuMzMtLjE5Ny4yMi0uMzEuNTMzLS4zMzguOTM3aDIuMjk5Yy0uMDA4LS40MDQtLjExMy0uNzE3LS4zMTctLjkzNy0uMjA0LS4yMi0uNDgtLjMzLS44MjctLjMzem0uMjMgNS4wNmMtLjk2NiAwLTEuNzIyLS4yNjctMi4yNjYtLjgtLjU0NC0uNTM0LS44MTYtMS4yOS0uODE2LTIuMjY3IDAtMS4wMDcuMjUxLTEuNzg1Ljc1NC0yLjMzNC41MDMtLjU1IDEuMTk5LS44MjUgMi4wODctLjgyNS44NDggMCAxLjUxLjI0MiAxLjk4Mi43MjUuNDcyLjQ4NC43MDkgMS4xNTIuNzA5IDIuMDA0di43OTVoLTMuODczYy4wMTguNDY1LjE1Ni44MjkuNDE0IDEuMDkuMjU4LjI2MS42Mi4zOTIgMS4wODUuMzkyLjM2MSAwIC43MDMtLjAzNyAxLjAyNi0uMTEzYTUuMTMzIDUuMTMzIDAgMCAwIDEuMDEtLjM2djEuMjY4Yy0uMjg3LjE0My0uNTkzLjI1LS45Mi4zMmE1Ljc5IDUuNzkgMCAwIDEtMS4xOTEuMTA0em03LjI1My02LjIyNmMuMjIyIDAgLjQwNi4wMTYuNTUzLjA0OWwtLjEyNCAxLjUzNmExLjg3NyAxLjg3NyAwIDAgMC0uNDgzLS4wNTRjLS41MjMgMC0uOTMuMTM0LTEuMjIyLjQwMy0uMjkyLjI2OC0uNDM4LjY0NC0uNDM4IDEuMTI4VjI0aC0xLjYzOHYtNi4wMDVoMS4yNGwuMjQyIDEuMDFoLjA4Yy4xODctLjMzNy40MzktLjYwOC43NTYtLjgxNGExLjg2IDEuODYgMCAwIDEgMS4wMzQtLjMwOXptNC4wMjkgMS4xNjZjLS4zNDcgMC0uNjIuMTEtLjgxNy4zMy0uMTk3LjIyLS4zMS41MzMtLjMzOC45MzdoMi4yOTljLS4wMDctLjQwNC0uMTEzLS43MTctLjMxNy0uOTM3LS4yMDQtLjIyLS40OC0uMzMtLjgyNy0uMzN6bS4yMyA1LjA2Yy0uOTY2IDAtMS43MjItLjI2Ny0yLjI2Ni0uOC0uNTQ0LS41MzQtLjgxNi0xLjI5LS44MTYtMi4yNjcgMC0xLjAwNy4yNTEtMS43ODUuNzU0LTIuMzM0LjUwNC0uNTUgMS4yLS44MjUgMi4wODctLjgyNS44NDkgMCAxLjUxLjI0MiAxLjk4Mi43MjUuNDczLjQ4NC43MDkgMS4xNTIuNzA5IDIuMDA0di43OTVoLTMuODczYy4wMTguNDY1LjE1Ni44MjkuNDE0IDEuMDkuMjU4LjI2MS42Mi4zOTIgMS4wODUuMzkyLjM2MiAwIC43MDQtLjAzNyAxLjAyNi0uMTEzYTUuMTMzIDUuMTMzIDAgMCAwIDEuMDEtLjM2djEuMjY4Yy0uMjg3LjE0My0uNTkzLjI1LS45MTkuMzJhNS43OSA1Ljc5IDAgMCAxLTEuMTkyLjEwNHptNS44MDMgMGMtLjcwNiAwLTEuMjYtLjI3NS0xLjY2My0uODIyLS40MDMtLjU0OC0uNjA0LTEuMzA3LS42MDQtMi4yNzggMC0uOTg0LjIwNS0xLjc1Mi42MTUtMi4zMDEuNDEtLjU1Ljk3NS0uODI1IDEuNjk1LS44MjUuNzU1IDAgMS4zMzIuMjk0IDEuNzI5Ljg4MWguMDU0YTYuNjk3IDYuNjk3IDAgMCAxLS4xMjQtMS4xOTh2LTEuOTIyaDEuNjQ0VjI0SDQ2LjQzbC0uMzE3LS43NzloLS4wN2MtLjM3Mi41OTEtLjk0Ljg4Ni0xLjcwMi44ODZ6bS41NzQtMS4zMDZjLjQyIDAgLjcyNi0uMTIxLjkyMS0uMzY1LjE5Ni0uMjQzLjMwMi0uNjU3LjMyLTEuMjR2LS4xNzhjMC0uNjQ0LS4xLTEuMTA2LS4yOTgtMS4zODYtLjE5OS0uMjc5LS41MjItLjQxOS0uOTctLjQxOWEuOTYyLjk2MiAwIDAgMC0uODUuNDY1Yy0uMjAzLjMxLS4zMDQuNzYtLjMwNCAxLjM1IDAgLjU5Mi4xMDIgMS4wMzUuMzA2IDEuMzMuMjA0LjI5Ni40OTYuNDQzLjg3NS40NDN6bTEwLjkyMi00LjkyYy43MDkgMCAxLjI2NC4yNzcgMS42NjUuODMuNC41NTMuNjAxIDEuMzEyLjYwMSAyLjI3NSAwIC45OTItLjIwNiAxLjc2LS42MiAyLjMwNC0uNDE0LjU0NC0uOTc3LjgxNi0xLjY5LjgxNi0uNzA1IDAtMS4yNTgtLjI1Ni0xLjY1OS0uNzY4aC0uMTEzbC0uMjc0LjY2MWgtMS4yNTF2LTguMzU3aDEuNjM4djEuOTQ0YzAgLjI0Ny0uMDIxLjY0My0uMDY0IDEuMTg3aC4wNjRjLjM4My0uNTk0Ljk1LS44OTIgMS43MDMtLjg5MnptLS41MjcgMS4zMWMtLjQwNCAwLS43LjEyNS0uODg2LjM3NC0uMTg2LjI0OS0uMjgzLjY2LS4yOSAxLjIzM3YuMTc3YzAgLjY0NS4wOTYgMS4xMDcuMjg3IDEuMzg2LjE5Mi4yOC40OTUuNDE5LjkxLjQxOS4zMzcgMCAuNjA1LS4xNTUuODA0LS40NjUuMTk5LS4zMS4yOTgtLjc2LjI5OC0xLjM1IDAtLjU5MS0uMS0xLjAzNS0uMy0xLjMzYS45NDMuOTQzIDAgMCAwLS44MjMtLjQ0M3ptMy4xODYtMS4xOTdoMS43OTRsMS4xMzQgMy4zNzljLjA5Ni4yOTMuMTYzLjY0LjE5OCAxLjA0MmguMDMzYy4wMzktLjM3LjExNi0uNzE3LjIzLTEuMDQybDEuMTEyLTMuMzc5aDEuNzU3bC0yLjU0IDYuNzczYy0uMjM0LjYyNy0uNTY2IDEuMDk2LS45OTcgMS40MDctLjQzMi4zMTItLjkzNi40NjgtMS41MTIuNDY4LS4yODMgMC0uNTYtLjAzLS44MzMtLjA5MnYtMS4zYTIuOCAyLjggMCAwIDAgLjY0NS4wN2MuMjkgMCAuNTQzLS4wODguNzYtLjI2Ni4yMTctLjE3Ny4zODYtLjQ0NC41MDgtLjgwM2wuMDk2LS4yOTUtMi4zODUtNS45NjJ6Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzMpIj4KICAgICAgICAgICAgPGNpcmNsZSBjeD0iMTkiIGN5PSIxOSIgcj0iMTkiIGZpbGw9IiNFMEUwRTAiLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTTIyLjQ3NCAxNS40NDNoNS4xNjJMMTIuNDM2IDMwLjRWMTAuMzYzaDE1LjJsLTUuMTYyIDUuMDh6Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGZpbGw9IiNEMkQyRDIiIGQ9Ik0xMjEuNTQ0IDE0LjU2di0xLjcyOGg4LjI3MnYxLjcyOGgtMy4wMjRWMjRoLTIuMjR2LTkuNDRoLTMuMDA4em0xMy43NDQgOS41NjhjLTEuMjkgMC0yLjM0MS0uNDE5LTMuMTUyLTEuMjU2LS44MS0uODM3LTEuMjE2LTEuOTQ0LTEuMjE2LTMuMzJzLjQwOC0yLjQ3NyAxLjIyNC0zLjMwNGMuODE2LS44MjcgMS44NzItMS4yNCAzLjE2OC0xLjI0czIuMzYuNDAzIDMuMTkyIDEuMjA4Yy44MzIuODA1IDEuMjQ4IDEuODggMS4yNDggMy4yMjQgMCAuMzEtLjAyMS41OTctLjA2NC44NjRoLTYuNDY0Yy4wNTMuNTc2LjI2NyAxLjA0LjY0IDEuMzkyLjM3My4zNTIuODQ4LjUyOCAxLjQyNC41MjguNzc5IDAgMS4zNTUtLjMyIDEuNzI4LS45NmgyLjQzMmEzLjg5MSAzLjg5MSAwIDAgMS0xLjQ4OCAyLjA2NGMtLjczNi41MzMtMS42MjcuOC0yLjY3Mi44em0xLjQ4LTYuNjg4Yy0uNC0uMzUyLS44ODMtLjUyOC0xLjQ0OC0uNTI4cy0xLjAzNy4xNzYtMS40MTYuNTI4Yy0uMzc5LjM1Mi0uNjA1LjgyMS0uNjggMS40MDhoNC4xOTJjLS4wMzItLjU4Ny0uMjQ4LTEuMDU2LS42NDgtMS40MDh6bTcuMDE2LTIuMzA0djEuNTY4Yy41OTctMS4xMyAxLjQ2MS0xLjY5NiAyLjU5Mi0xLjY5NnYyLjMwNGgtLjU2Yy0uNjcyIDAtMS4xNzkuMTY4LTEuNTIuNTA0LS4zNDEuMzM2LS41MTIuOTE1LS41MTIgMS43MzZWMjRoLTIuMjU2di04Ljg2NGgyLjI1NnptNi40NDggMHYxLjMyOGMuNTY1LS45NyAxLjQ4My0xLjQ1NiAyLjc1Mi0xLjQ1Ni42NzIgMCAxLjI3Mi4xNTUgMS44LjQ2NC41MjguMzEuOTM2Ljc1MiAxLjIyNCAxLjMyOC4zMS0uNTU1LjczMy0uOTkyIDEuMjcyLTEuMzEyYTMuNDg4IDMuNDg4IDAgMCAxIDEuODE2LS40OGMxLjA1NiAwIDEuOTA3LjMzIDIuNTUyLjk5Mi42NDUuNjYxLjk2OCAxLjU5Ljk2OCAyLjc4NFYyNGgtMi4yNHYtNC44OTZjMC0uNjkzLS4xNzYtMS4yMjQtLjUyOC0xLjU5Mi0uMzUyLS4zNjgtLjgzMi0uNTUyLTEuNDQtLjU1MnMtMS4wOS4xODQtMS40NDguNTUyYy0uMzU3LjM2OC0uNTM2Ljg5OS0uNTM2IDEuNTkyVjI0aC0yLjI0di00Ljg5NmMwLS42OTMtLjE3Ni0xLjIyNC0uNTI4LTEuNTkyLS4zNTItLjM2OC0uODMyLS41NTItMS40NC0uNTUycy0xLjA5LjE4NC0xLjQ0OC41NTJjLS4zNTcuMzY4LS41MzYuODk5LS41MzYgMS41OTJWMjRoLTIuMjU2di04Ljg2NGgyLjI1NnpNMTY0LjkzNiAyNFYxMi4xNmgyLjI1NlYyNGgtMi4yNTZ6bTcuMDQtLjE2bC0zLjQ3Mi04LjcwNGgyLjUyOGwyLjI1NiA2LjMwNCAyLjM4NC02LjMwNGgyLjM1MmwtNS41MzYgMTMuMDU2aC0yLjM1MmwxLjg0LTQuMzUyeiIvPgogICAgPC9nPgo8L3N2Zz4K) center no-repeat",
-        }}
-      ></span>
-      <div data-custom-class="body">
-        {/* The following dangerouslySetInnerHTML is used to render the privacy policy HTML content.
-            If you want to convert all HTML to JSX, you will need to manually rewrite all tags and structure.
-            For now, this approach preserves your formatting and links. */}
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `
-              <div><strong><span style="font-size: 26px;"><span data-custom-class="title"><h1>PRIVACY POLICY</h1></span></span></strong></div>
-              <div><span style="color: rgb(127, 127, 127);"><strong><span style="font-size: 15px;"><span data-custom-class="subtitle">Last updated June 27, 2025</span></span></strong></span></div>
-              <div><br></div>
-              <!-- ...existing HTML content... -->
-              <div>
-                <!-- Place the rest of your privacy policy HTML here, as in your original file. -->
-                <!-- For a full JSX conversion, each HTML tag must be replaced with its React equivalent. -->
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg">
+        <div className="px-8 py-12">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Notice</h1>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              This Privacy Notice for Aeteau College describes how and why we might access, collect, store, use, and/or share your personal information when you use our services.
+            </p>
+          </div>
+
+          {/* Key Points Summary */}
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Summary of Key Points</h2>
+            <div className="space-y-3 text-gray-700">
+              <p><strong>What personal information do we process?</strong> We may process personal information depending on how you interact with our Services, including names, email addresses, contact preferences, and application data.</p>
+              <p><strong>Do we process sensitive information?</strong> We do not process sensitive personal information.</p>
+              <p><strong>Do we collect information from third parties?</strong> We do not collect any information from third parties.</p>
+              <p><strong>How do we keep your information safe?</strong> We have organizational and technical processes in place to protect your personal information, though no system can be 100% secure.</p>
+            </div>
+          </div>
+
+          {/* Table of Contents */}
+          <div className="bg-gray-50 p-6 rounded-lg mb-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Table of Contents</h2>
+            <div className="grid md:grid-cols-2 gap-2 text-blue-600">
+              <a href="#section-1" className="hover:underline">1. What Information Do We Collect?</a>
+              <a href="#section-2" className="hover:underline">2. How Do We Process Your Information?</a>
+              <a href="#section-3" className="hover:underline">3. What Legal Bases Do We Rely On?</a>
+              <a href="#section-4" className="hover:underline">4. When Do We Share Information?</a>
+              <a href="#section-5" className="hover:underline">5. International Transfers</a>
+              <a href="#section-6" className="hover:underline">6. How Long Do We Keep Information?</a>
+              <a href="#section-7" className="hover:underline">7. How Do We Keep Information Safe?</a>
+              <a href="#section-8" className="hover:underline">8. What Are Your Privacy Rights?</a>
+              <a href="#section-9" className="hover:underline">9. Do-Not-Track Features</a>
+              <a href="#section-10" className="hover:underline">10. US Residents' Privacy Rights</a>
+              <a href="#section-11" className="hover:underline">11. Updates to This Notice</a>
+              <a href="#section-12" className="hover:underline">12. Contact Information</a>
+            </div>
+          </div>
+
+          {/* Section 1 */}
+          <section id="section-1" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">1. What Information Do We Collect?</h2>
+            
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Personal Information You Disclose to Us</h3>
+              <p className="text-gray-700 mb-4">We collect personal information that you voluntarily provide to us when you express interest in our services or contact us. This may include:</p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                <li>Names</li>
+                <li>Email addresses</li>
+                <li>Contact preferences</li>
+                <li>Application data</li>
+              </ul>
+              <p className="text-gray-700 mt-4"><strong>Note:</strong> We do not process sensitive information such as racial origins, sexual orientation, or religious beliefs.</p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Information Automatically Collected</h3>
+              <p className="text-gray-700 mb-4">We automatically collect certain information when you visit our services, including:</p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                <li>IP address and device characteristics</li>
+                <li>Browser type and settings</li>
+                <li>Operating system and language preferences</li>
+                <li>Usage data and activity logs</li>
+                <li>Date/time stamps and pages viewed</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Section 2 */}
+          <section id="section-2" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">2. How Do We Process Your Information?</h2>
+            <p className="text-gray-700 mb-4">We process your personal information for the following purposes:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>To provide, improve, and administer our Services</li>
+              <li>To communicate with you</li>
+              <li>For security and fraud prevention</li>
+              <li>To comply with legal obligations</li>
+              <li>To send marketing and promotional communications (with your consent)</li>
+              <li>To protect our Services and users</li>
+              <li>To save or protect vital interests when necessary</li>
+            </ul>
+          </section>
+
+          {/* Section 3 */}
+          <section id="section-3" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">3. What Legal Bases Do We Rely On?</h2>
+            
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">For EU/UK Residents</h3>
+              <p className="text-gray-700 mb-4">Under GDPR and UK GDPR, we rely on the following legal bases:</p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                <li><strong>Consent:</strong> When you give us permission for specific purposes</li>
+                <li><strong>Legitimate Interests:</strong> For business operations that don't override your rights</li>
+                <li><strong>Legal Obligations:</strong> To comply with laws and regulations</li>
+                <li><strong>Vital Interests:</strong> To protect safety when necessary</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">For Canadian Residents</h3>
+              <p className="text-gray-700">We process information based on express or implied consent, with exceptions for legitimate purposes such as fraud prevention, legal compliance, and safety protection.</p>
+            </div>
+          </section>
+
+          {/* Section 4 */}
+          <section id="section-4" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">4. When and With Whom Do We Share Information?</h2>
+            <p className="text-gray-700 mb-4">We may share your personal information in the following limited situations:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li><strong>Business Transfers:</strong> In connection with mergers, acquisitions, or asset sales</li>
+              <li><strong>Legal Requirements:</strong> When required by law or to protect rights</li>
+              <li><strong>Service Providers:</strong> With trusted partners who help us operate our services</li>
+            </ul>
+          </section>
+
+          {/* Section 5 */}
+          <section id="section-5" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">5. International Information Transfers</h2>
+            <p className="text-gray-700 mb-4">Our servers are located in the United States. If you're accessing our services from outside the US, your information may be transferred, stored, and processed in the United States.</p>
+            <p className="text-gray-700">For EU/UK residents, we use Standard Contractual Clauses and other appropriate safeguards to protect your information during international transfers.</p>
+          </section>
+
+          {/* Section 6 */}
+          <section id="section-6" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">6. How Long Do We Keep Your Information?</h2>
+            <p className="text-gray-700 mb-4">We retain your personal information only as long as necessary for the purposes outlined in this notice, with a maximum retention period of 1 year unless required by law.</p>
+            <p className="text-gray-700">When no longer needed, we will delete or anonymize your information, or securely store it until deletion is possible.</p>
+          </section>
+
+          {/* Section 7 */}
+          <section id="section-7" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">7. How Do We Keep Your Information Safe?</h2>
+            <p className="text-gray-700 mb-4">We implement appropriate technical and organizational security measures to protect your personal information. However, no electronic transmission or storage system can be guaranteed to be 100% secure.</p>
+            <p className="text-gray-700">While we strive to protect your information, you access our services at your own risk and should only do so in secure environments.</p>
+          </section>
+
+          {/* Section 8 */}
+          <section id="section-8" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">8. What Are Your Privacy Rights?</h2>
+            <p className="text-gray-700 mb-4">Depending on your location, you may have the following rights:</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>Request access to your personal information</li>
+              <li>Request correction or deletion of your information</li>
+              <li>Restrict processing of your information</li>
+              <li>Data portability (where applicable)</li>
+              <li>Object to automated decision-making</li>
+              <li>Withdraw consent at any time</li>
+              <li>Opt out of marketing communications</li>
+            </ul>
+            <p className="text-gray-700 mt-4">To exercise your rights, contact us at <a href="mailto:info@aeteau.college" className="text-blue-600 hover:underline">info@aeteau.college</a>.</p>
+          </section>
+
+          {/* Section 9 */}
+          <section id="section-9" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">9. Do-Not-Track Features</h2>
+            <p className="text-gray-700">Most browsers include Do-Not-Track (DNT) features. Since no uniform technology standard exists for DNT signals, we do not currently respond to DNT browser signals or similar mechanisms.</p>
+          </section>
+
+          {/* Section 10 */}
+          <section id="section-10" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">10. US Residents' Specific Privacy Rights</h2>
+            
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Categories of Information We Collect</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-white border border-gray-200">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Examples</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Collected</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr>
+                      <td className="px-6 py-4 text-sm font-medium text-gray-900">A. Identifiers</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">Name, email, IP address, account name</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-semibold">YES</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 text-sm font-medium text-gray-900">B. Personal Information</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">Contact info, education, employment</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-semibold">YES</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 text-sm font-medium text-gray-900">J. Education Information</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">Student records, directory information</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-semibold">YES</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 text-sm font-medium text-gray-900">All Other Categories</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">Protected characteristics, biometric, commercial, etc.</td>
+                      <td className="px-6 py-4 text-sm text-red-600 font-semibold">NO</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            `,
-          }}
-        />
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Your Rights</h3>
+              <p className="text-gray-700 mb-4">US residents may have the following rights:</p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                <li>Right to know what personal data is being processed</li>
+                <li>Right to access your personal data</li>
+                <li>Right to correct inaccuracies</li>
+                <li>Right to request deletion</li>
+                <li>Right to obtain a copy of your data</li>
+                <li>Right to non-discrimination</li>
+                <li>Right to opt out of targeted advertising or profiling</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Section 11 */}
+          <section id="section-11" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">11. Updates to This Notice</h2>
+            <p className="text-gray-700">We may update this Privacy Notice from time to time. The updated version will be indicated by a revised date. We may notify you of material changes by posting a notice or sending a direct notification.</p>
+          </section>
+
+          {/* Section 12 */}
+          <section id="section-12" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">12. How Can You Contact Us?</h2>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <p className="text-gray-700 mb-4">If you have questions or comments about this notice, you can contact us:</p>
+              <div className="space-y-2 text-gray-700">
+                <p><strong>Email:</strong> <a href="mailto:info@aeteau.college" className="text-blue-600 hover:underline">info@aeteau.college</a></p>
+                <p><strong>Alternative Email:</strong> <a href="mailto:info@aeteau.edu" className="text-blue-600 hover:underline">info@aeteau.edu</a></p>
+                <p><strong>Website:</strong> <a href="http://www.aeteau.edu/contact" className="text-blue-600 hover:underline">www.aeteau.edu/contact</a></p>
+              </div>
+            </div>
+          </section>
+
+          {/* Data Rights Section */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Review, Update, or Delete Your Data</h2>
+            <p className="text-gray-700 mb-4">You have the right to request access to, correct, or delete your personal information. You may also withdraw consent to our processing of your information.</p>
+            <p className="text-gray-700">To make such requests, please visit: <a href="mailto:info@aeteau.edu" className="text-blue-600 hover:underline">info@aeteau.edu</a></p>
+          </section>
+
+          {/* Footer */}
+          <div className="border-t border-gray-200 pt-8 text-center">
+            <p className="text-gray-600">© 2024 Aeteau College. All rights reserved.</p>
+            <p className="text-sm text-gray-500 mt-2">Last updated: 6/29/2025. Please check with the college for the most current version</p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default PrivacyPolicy;
