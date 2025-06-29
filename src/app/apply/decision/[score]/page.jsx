@@ -19,8 +19,6 @@ export default function DecisionPortal() {
   const [showLetter, setShowLetter] = useState(false);
   const timers = useRef([]);
 
-  const random100 = () => 80;
-
   const processApplication = useCallback((applicationScore) => {
     setIsProcessing(true);
     timers.current.push(
@@ -28,11 +26,11 @@ export default function DecisionPortal() {
         let waiver = false;
         let finalDecision = null;
 
-        if (random100() <= applicationScore) {
+        if (applicationScore >= 80) {
           finalDecision = "accepted";
-          if (random100() <= applicationScore) waiver = true;
+          if (applicationScore >= 90) waiver = true;
         } else {
-          finalDecision = random100() <= applicationScore ? "waitlisted" : "denied";
+          finalDecision = 70 <= applicationScore ? "waitlisted" : "denied";
         }
 
         setDecision(finalDecision);
