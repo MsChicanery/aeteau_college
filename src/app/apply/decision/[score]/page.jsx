@@ -37,7 +37,7 @@ export default function DecisionPortal() {
         setTuitionWaiver(waiver);
         setIsProcessing(false);
         timers.current.push(window.setTimeout(() => setShowLetter(true), 500));
-      }, 2000)
+      }, 20000)
     );
   }, []);
 
@@ -233,7 +233,7 @@ export default function DecisionPortal() {
 
   return (
     <div className="bg-gradient-to-br from-gray-300 via-gray-700 to-slate-900 relative overflow-hidden">
-      <main className="relative z-10 container mx-auto px-6 py-12 max-w-4xl">
+      <main className="relative z-10 container mx-auto px-6 py-96 max-w-4xl">
         {isProcessing && (
           <div className="text-center mb-12">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20">
@@ -246,6 +246,9 @@ export default function DecisionPortal() {
               <br></br>
               <h3 className="text-4xl font-bold text-white mb-4">Processing Your Application</h3>
               <p className="text-white/70 text-xl">Our admissions committee is reviewing your submission…</p>
+              <p className="text-white/70 text-xl">Your decision is not a reflection of your abilities in the future.</p>
+              <p className="text-white/70 text-xl">Every student is capable of greatness.</p>
+              <p className="text-white/70 text-xl">Whatever you get here, we know you will go on to great things.</p>
               <div className="mt-6 flex justify-center space-x-2">
                 <div className="w-2 h-2 bg-[#c2ac2a] rounded-full animate-bounce" />
                 <div className="w-2 h-2 bg-[#c2ac2a] rounded-full transform animate-bounce [animation-delay:100ms]" />
