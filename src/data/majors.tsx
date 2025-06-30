@@ -150,62 +150,6 @@ const majors = [
     ]
   },
   {
-    school: "Ponzi School of Scamming",
-    type: "Major",
-    name: "Modern-Day Income Generation",
-    image_link: "majors/modern_income.jpg",
-    description:
-      "Generating income in the modern day at a rate far exceeding traditional investments. Learn the art of wealth acquisition through unconventional means.",
-    degree_type: "Bachelor of Income Tactfulness (B.A.I.T.)",
-    program_highlights: [
-      "Industry-leading insights on wealth generation",
-      "Seminars with experts, including Andrew Tate and Tai Lopez",
-      "Immediate implementation of strategies in real-world projects",
-      "Mentorship from pioneers in high-yield investing"
-    ],
-    career_opportunities: [
-      "Politician",
-      "Blockchain Lead",
-      "Head of Pyramidal Enterprises",
-      "Chief Executive Officer"
-    ],
-    required_courses: [
-      "BAIT 101: Pyramid Schemes 101",
-      "BAIT 201: The Art of Dropshipping",
-      "BAIT 301: Copywriting and Persuasion",
-      "BAIT 401: Affiliate Marketing Mastery",
-      "BAIT 450: Mastering Social Media Scams"
-    ]
-  },
-  {
-    school: "School of Engineering",
-    type: "Major",
-    name: "Social Engineering",
-    image_link: "majors/social_engineering.jpg",
-    description:
-      "Social Engineering blends technical precision with psychological insight to design, influence, and manipulate human behavior in complex systems. Explore the intersection of technology and society to shape the world around you.",
-    degree_type: "Bachelor of Science (B.S.)",
-    program_highlights: [
-      "Combines the analytical rigor of engineering with social sciences",
-      "Engage in real-world manipulation simulations",
-      "Analyze human behavior using data science and AI",
-      "Master persuasive techniques for public influence"
-    ],
-    career_opportunities: [
-      "Marketing Strategist",
-      "Political Consultant",
-      "Human Resources Specialist",
-      "Propaganda Expert"
-    ],
-    required_courses: [
-      "SOEN 101: Fundamentals of Human Influence",
-      "SOEN 201: Psychological Manipulation Techniques",
-      "SOEN 301: Cybersecurity and Social Penetration",
-      "SOEN 401: Ethics in Social Engineering",
-      "SOEN 450: Advanced Persuasion Models"
-    ]
-  },
-  {
     "school": "Suits School of Law",
     "type": "Ppe-Professional Track",
     "name": "Pre-Law",

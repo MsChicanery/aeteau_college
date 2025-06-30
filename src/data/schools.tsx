@@ -31,22 +31,6 @@ const schools = [
     foundedYear: 1800,
     totalStudents: 700,
   },
-  {
-    name: "Ponzi School of Scamming",
-    description:
-      "The Ponzi School of Scamming teaches you how to generate vast quantities of wealth in the current day and age.",
-    dean: "Dr. Charles P. Bianchi",
-    foundedYear: 1040,
-    totalStudents: 1882,
-  },
-  {
-    name: "Aeteau College",
-    description:
-      "Aeteau College is a prestigious institution where admission is granted based on a mix of impossible criteria, ninja-like physical feats, and cosmic alignment.",
-    dean: "Dr. Chloe Prescott",
-    foundedYear: 1600,
-    totalStudents: 1,
-  },
 ];
 
 export default schools;

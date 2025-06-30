@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Globe, Award, FileText, CheckCircle, BookOpen, Sparkles } from "lucide-react";
+import { Users, Globe, Award, FileText, CheckCircle, BookOpen, Sparkles, Mic, Brain, Mail } from "lucide-react";
 import Link from "next/link";
 
 const classProfile = {
@@ -8,18 +8,15 @@ const classProfile = {
   averageSAT: 1350,
   averageACT: 30,
   acceptanceRate: 20,
-  diversity: {
-    internationalStudents: 15,
-    underrepresentedMinorities: 30,
-  },
 };
 
 const admissionsProcess = [
-  { icon: FileText, label: "Apply Online", description: "Complete the online application form." },
-  { icon: BookOpen, label: "Transcripts", description: "Write several essays and answer several questions." },
-  { icon: CheckCircle, label: "Test Scores", description: "Submit your SAT score." },
-  { icon: Globe, label: "Decision", description: "Receive your admission decision." },
-  { icon: Award, label: "Deposit", description: "Check your email for our deposit process" },
+  { icon: FileText, label: "Apply", description: "Just your name and email to get started." },
+  { icon: BookOpen, label: "Essays & Questions", description: "Tell us more about yourself in a few prompts." },
+  { icon: Brain, label: "Decison!", description: "Our worm-infested Admissions Team makes your decision in around 20 seconds!" },
+  { icon: Mail, label: "Email", description: "We’ll email you with more information." },
+  { icon: Award, label: "Deposit", description: "Secure your spot with a quick deposit of just $30 (optional, proceeds go to r/ApplyingToCollege)." },
+  { icon: Mic, label: "Orientation", description: "Sign up for a spot at one of our virtual orientations!" },
 ];
 
 const deadlines = [
@@ -86,14 +83,14 @@ export default function AdmissionsPage() {
             </Card>
             <Card>
               <CardContent className="py-6 flex flex-col items-center">
-                <span className="text-4xl font-bold text-blue-700">{classProfile.diversity.internationalStudents}%</span>
-                <span className="text-gray-700 mt-2">International Students</span>
+                <span className="text-4xl font-bold text-blue-700">23/50</span>
+                <span className="text-gray-700 mt-2">U.S. States Represented</span>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="py-6 flex flex-col items-center">
-                <span className="text-4xl font-bold text-purple-700">{classProfile.diversity.underrepresentedMinorities}%</span>
-                <span className="text-gray-700 mt-2">Underrepresented Minorities</span>
+                <span className="text-4xl font-bold text-purple-700">12</span>
+                <span className="text-gray-700 mt-2">Countries Represented</span>
               </CardContent>
             </Card>
           </div>
