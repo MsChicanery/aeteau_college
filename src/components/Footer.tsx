@@ -39,7 +39,7 @@ export default function Footer() {
             </address>
             <p>
               <span className="font-semibold">Email:</span>{' '}
-              <a href="mailto:info@aeteau.edu" className="hover:underline">info@aeteau.edu</a>
+              <a href="mailto:info@aeteau.college" className="hover:underline">info@aeteau.college</a>
             </p>
             <p>
               <span className="font-semibold">Hours:</span>{' '}

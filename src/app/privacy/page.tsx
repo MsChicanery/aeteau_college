@@ -117,6 +117,8 @@ const PrivacyPolicy = () => {
               <li><strong>Legal Requirements:</strong> When required by law or to protect rights</li>
               <li><strong>Service Providers:</strong> With trusted partners who help us operate our services</li>
             </ul>
+            <br></br>
+            <p className="text-gray-700 mb-4">Your data will <strong>never</strong>  be sold to a third party for profit.</p>
           </section>
 
           {/* Section 5 */}
@@ -231,8 +233,8 @@ const PrivacyPolicy = () => {
               <p className="text-gray-700 mb-4">If you have questions or comments about this notice, you can contact us:</p>
               <div className="space-y-2 text-gray-700">
                 <p><strong>Email:</strong> <a href="mailto:info@aeteau.college" className="text-blue-600 hover:underline">info@aeteau.college</a></p>
-                <p><strong>Alternative Email:</strong> <a href="mailto:info@aeteau.edu" className="text-blue-600 hover:underline">info@aeteau.edu</a></p>
-                <p><strong>Website:</strong> <a href="http://www.aeteau.edu/contact" className="text-blue-600 hover:underline">www.aeteau.edu/contact</a></p>
+                <p><strong>Alternative Email:</strong> <a href="mailto:info@aeteau.college" className="text-blue-600 hover:underline">info@aeteau.college</a></p>
+                <p><strong>Website:</strong> <a href="http://www.aeteau.college/contact" className="text-blue-600 hover:underline">www.aeteau.college/contact</a></p>
               </div>
             </div>
           </section>
@@ -241,7 +243,7 @@ const PrivacyPolicy = () => {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Review, Update, or Delete Your Data</h2>
             <p className="text-gray-700 mb-4">You have the right to request access to, correct, or delete your personal information. You may also withdraw consent to our processing of your information.</p>
-            <p className="text-gray-700">To make such requests, please visit: <a href="mailto:info@aeteau.edu" className="text-blue-600 hover:underline">info@aeteau.edu</a></p>
+            <p className="text-gray-700">To make such requests, please visit: <a href="mailto:info@aeteau.college" className="text-blue-600 hover:underline">info@aeteau.college</a></p>
           </section>
 
           {/* Footer */}

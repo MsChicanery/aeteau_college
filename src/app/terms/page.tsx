@@ -270,7 +270,7 @@ const TermsOfService = () => {
             <div className="bg-gray-50 p-6 rounded-lg">
               <div className="space-y-2 text-gray-700">
                 <p><strong>College Address:</strong> Monticello, New York</p>
-                <p><strong>Alternative Email:</strong> <a href="mailto:info@aeteau.edu" className="text-blue-600 hover:underline">info@aeteau.edu</a></p>
+                <p><strong>Alternative Email:</strong> <a href="mailto:info@aeteau.college" className="text-blue-600 hover:underline">info@aeteau.college</a></p>
                 <p><strong>Phone:</strong> (555) 123-4567</p>
                 <p><strong>Hours:</strong> Monday–Friday, 9:00am–5:00pm</p>
                 <p><strong>Motto:</strong> "nos nescio quomodo latine loqui"</p>

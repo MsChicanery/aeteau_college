@@ -20,7 +20,7 @@ const schools = [
     description:
       "The School of College studies the intricacies of college applications, admissions strategies, and consulting.",
     dean: "Dr. Jp Thompson",
-    foundedYear: 1700,
+    foundedYear: 1984,
     totalStudents: 1500,
   },
   {
@@ -30,6 +30,14 @@ const schools = [
     dean: "Dr. Smith Williams",
     foundedYear: 1800,
     totalStudents: 700,
+  },
+  {
+    name: "Alex School of Computer Science",
+    description:
+      "Suits School of Law trains future legal professionals with a focus on courtroom strategy, corporate law, and high-stakes litigation.",
+    dean: "Sir Alexander The 3rd",
+    foundedYear: 2017,
+    totalStudents: 900,
   },
 ];
 

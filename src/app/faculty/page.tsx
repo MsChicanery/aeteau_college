@@ -5,9 +5,9 @@ import Image from 'next/image'
 
 const faculty = [
 {
-    name: "Dr. Carly T",
+    name: "Dr. Chloe T",
     title: "President",
-    description: "Carly T. is a cool person. She has a PhD in Discord Moderation from UC Davis, a Bachelors of Arts in Online Discussions, and has studied Server Design at the University of Cambridge.",
+    description: "Chloe T. is a cool person. She has a PhD in Discord Moderation from UC Davis, a Bachelors of Arts in Online Discussions, and has studied Server Design at the University of Cambridge.",
     image: "faculty/carly.png"
   },
   {

@@ -69,24 +69,22 @@ const MajorDetailPage: React.FC = () => {
     );
   }
 
-  const imageUrl = isValidUrl(major.image_link) ? major.image_link : '/default-image.png';
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
       <Card className="mb-8">
-        <CardHeader className="relative">
-          <div className="absolute inset-0 h-48 overflow-hidden rounded-t-lg">
-            <img
-              src={imageUrl}
-              alt={major.name}
-              className="w-full h-full object-cover opacity-20"
-            />
-          </div>
-          <div className="relative z-10 pt-8">
-            <Badge className="mb-2">{major.name}</Badge>
-            <CardTitle className="text-4xl font-bold">{major.name}</CardTitle>
-          </div>
-        </CardHeader>
+        <CardHeader className="p-0 overflow-hidden rounded-t-lg">
+  <img
+    src={`/${major.image_link}`}
+    alt={major.name}
+    className="w-full h-64 object-cover"
+  />
+  <div className="p-6">
+    <Badge className="mb-2">{major.name}</Badge>
+    <CardTitle className="text-4xl font-bold">{major.name}</CardTitle>
+  </div>
+</CardHeader>
+
         <CardContent>
           <p className="text-lg text-muted-foreground mb-8">{major.description}</p>
 

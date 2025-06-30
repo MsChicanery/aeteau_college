@@ -150,6 +150,69 @@ const majors = [
     ]
   },
   {
+  "school": "Westcote School of the Arts",
+  "type": "Major",
+  "name": "KPOP Performance and Arts",
+  "image_link": "majors/kpop_performance.jpg",
+  "description":
+    "Blending high-energy performance, musical precision, and global pop culture, KPOP Performance and Arts trains students in the art of Korean pop entertainment. This program develops skills in choreography, vocal performance, stage presence, and multimedia artistry, preparing graduates for the international music industry.",
+  "degree_type": "Bachelor of Fine Arts (B.F.A.)",
+  "program_highlights": [
+    "Dance and vocal training with industry professionals",
+    "Studio sessions for recording and performance critique",
+    "Workshops with KPOP idols, producers, and choreographers",
+    "Cultural immersion and Korean language fundamentals",
+    "Stage production and styling courses for live and video performance"
+  ],
+  "career_opportunities": [
+    "KPOP Idol Trainee",
+    "Choreographer",
+    "Music Video Director",
+    "Vocal Coach",
+    "Entertainment Company Talent Scout"
+  ],
+  "required_courses": [
+    "KPOP 101: Introduction to Korean Pop Culture",
+    "KPOP 130: Vocal Techniques for Performance",
+    "KPOP 205: Contemporary Dance and Choreography",
+    "KPOP 250: Stage Presence and Persona Building",
+    "KPOP 320: Korean Language for Performers",
+    "KPOP 410: Live Showcase and Capstone Project"
+  ]
+},
+{
+  "school": "Alex School of Computer Science",
+  "type": "Major",
+  "name": "McDonald's Training and Workforce Readiness",
+  "image_link": "major_img/mcdonalds.png",
+  "description":
+    "As career outcomes evolve in the tech landscape, and as unemployment becomes more common, this program prepares graduates for real-world application of skills in fast-paced, team-driven environments. The McDonald's Training and Workforce Readiness major offers practical instruction in service efficiency, team coordination, and corporate-standard operating procedures — bridging the gap between computer science education and gainful employment.",
+  "degree_type": "Bachelor of Arts (B.A.)",
+  "program_highlights": [
+    "Hands-on training with McDonald's kitchen systems and protocols",
+    "Team-based simulations reflecting real shift environments",
+    "Soft skill development in customer interaction and adaptability",
+    "Exposure to scheduling algorithms and inventory systems",
+    "Pathways to shift leadership and corporate training positions"
+  ],
+  "career_opportunities": [
+    "Crew Member",
+    "Shift Manager",
+    "Drive-Thru Coordinator",
+    "Onboarding Specialist",
+    "Assistant Store Manager"
+  ],
+  "required_courses": [
+    "MCW 101: Introduction to QSR Workplace Culture",
+    "MCW 115: Fry Station Fundamentals",
+    "MCW 202: Register Operation and Order Accuracy",
+    "MCW 250: Drive-Thru Communication Systems",
+    "MCW 305: Shift Leadership and Team Dynamics",
+    "MCW 490: Capstone: Running a Full Lunch Rush"
+  ]
+},
+
+  {
     "school": "Suits School of Law",
     "type": "Ppe-Professional Track",
     "name": "Pre-Law",
@@ -290,34 +353,6 @@ const majors = [
       "IS 450: The Psychology of the Client and the Court"
     ]
   },
-  {
-    "school": "School of Modern Culture and Identity",
-    "type": "Major",
-    "name": "ABG Studies (Asian Baby Girl Studies)",
-    "image_link": "majors/abg_studies.jpg",
-    "description": "The Major in ABG Studies explores the cultural, social, and fashion trends associated with the Asian Baby Girl (ABG) identity. Students will examine the evolution of ABG as a cultural phenomenon, studying the intersection of style, music, identity, and community in the context of contemporary Asian youth culture. The program also delves into the role of ABGs in social media, popular culture, and the blending of traditional and modern Asian identities.",
-    "degree_type": "Bachelor of Arts (B.A.)",
-    "program_highlights": [
-      "Analysis of ABG aesthetics, fashion, and beauty standards",
-      "In-depth study of ABG influence on pop culture and social media",
-      "Exploration of the intersection of Asian diaspora experiences and identity",
-      "Workshops on styling, makeup techniques, and cultural representation"
-    ],
-    "career_opportunities": [
-      "Cultural Consultant for Fashion and Media",
-      "Social Media Influencer specializing in Asian Youth Culture",
-      "Trend Analyst for Fashion or Music Industries",
-      "Community Manager for Asian Cultural Organizations",
-      "Creative Director for Media and Branding in Asian Communities"
-    ],
-    "required_courses": [
-      "ABG 101: Introduction to ABG Culture and Aesthetic",
-      "ABG 201: The History and Evolution of the ABG Identity",
-      "ABG 301: ABGs in Media: Music, Social Media, and Fashion",
-      "ABG 401: The Global Impact of ABG on Asian Diaspora",
-      "ABG 450: ABG and the Future: Trends, Identity, and Representation"
-    ]
-  }  
 ];
 
 export default majors;

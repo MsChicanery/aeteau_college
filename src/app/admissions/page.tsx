@@ -13,9 +13,9 @@ const classProfile = {
 const admissionsProcess = [
   { icon: FileText, label: "Apply", description: "Just your name and email to get started." },
   { icon: BookOpen, label: "Essays & Questions", description: "Tell us more about yourself in a few prompts." },
-  { icon: Brain, label: "Decison!", description: "Our worm-infested Admissions Team makes your decision in around 20 seconds!" },
+  { icon: Brain, label: "Decison!", description: "Our slightly unhinged Admissions Team makes your decision in around 20 seconds!" },
   { icon: Mail, label: "Email", description: "We’ll email you with more information." },
-  { icon: Award, label: "Deposit", description: "Secure your spot with a quick deposit of just $30 (optional, proceeds go to r/ApplyingToCollege)." },
+  { icon: Award, label: "Deposit", description: "Secure your spot with a quick deposit of just $30 (optional, proceeds go to the ApplyingToCollege Discord Server)." },
   { icon: Mic, label: "Orientation", description: "Sign up for a spot at one of our virtual orientations!" },
 ];
 
@@ -43,7 +43,7 @@ export default function AdmissionsPage() {
               </Link>
               <div className="flex flex-col gap-2">
                 <span className="text-gray-700 text-center">Questions?</span>
-                <a href="mailto:info@aeteau.edu" className="text-blue-700 hover:underline text-center">Contact Admissions</a>
+                <a href="mailto:info@aeteau.college" className="text-blue-700 hover:underline text-center">Contact Admissions</a>
               </div>
             </div>
           </CardContent>
